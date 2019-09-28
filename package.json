@@ -1,0 +1,15 @@
+{
+  "name": "monaco-editor-nls",
+  "version": "0.0.1",
+  "description": "Localization for monaco editor",
+  "main": "nls.js",
+  "scripts": {
+    "create-locale": "node ./script/script.js"
+  },
+  "author": "xiaoyong <454926339@qq.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "child_process": "^1.0.2",
+    "rimraf": "^3.0.0"
+  }
+}
