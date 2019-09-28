@@ -36,3 +36,10 @@ export function localize(path, data, defaultMessage) {
 export function setLocaleData(data) {
     CURRENT_LOCALE_DATA = data;
 }
+
+export function loadMessageBundle(file) {
+    return localize;
+}
+export function config(opt) {
+    return loadMessageBundle;
+}
