@@ -1,8 +1,17 @@
 {
   "name": "monaco-editor-nls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Localization for monaco editor",
+  "keywords": [
+    "localization",
+    "localize",
+    "monaco",
+    "monaco editor",
+    "vscode",
+    "nls"
+  ],
   "main": "vscode-nls.js",
+  "repository": "git@github.com:wang12124468/monaco-editor-nls.git",
   "scripts": {
     "create-locale": "node ./script/script.js"
   },
