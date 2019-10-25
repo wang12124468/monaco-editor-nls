@@ -1,25 +1,25 @@
 {
+    "vs/base/common/severity": {
+        "sev.error": "Kesalahan",
+        "sev.warning": "Peringatan",
+        "sev.info": "Info"
+    },
     "vs/base/common/errorMessage": {
         "stackTrace.format": "{0}: {1}",
         "error.defaultMessage": "Terjadi kesalahan yang tidak diketahui. Mohon periksa cacatan untuk rincian lebih lanjut",
         "nodeExceptionMessage": "Sebuah kesalahan sistem terjadi ({0})",
         "error.moreErrors": "{0} ({1} total kesalahan)"
     },
-    "vs/base/common/severity": {
-        "sev.error": "Kesalahan",
-        "sev.warning": "Peringatan",
-        "sev.info": "Info"
+    "vs/base/node/zip": {
+        "invalid file": "Kesalahan mengekstrak {0}. Berkas tidak valid.",
+        "incompleteExtract": "Tidak lengkap. Ditemukan {0} dari {1} entri.",
+        "notFound": "{0} tidak ditemukan di dalam zip."
     },
     "vs/base/browser/ui/actionbar/actionbar": {
         "titleLabel": "{0} ({1})"
     },
     "vs/base/node/processes": {
         "TaskRunner.UNC": "Tidak dapat menjalankan perintah shell pada drive UNC."
-    },
-    "vs/base/node/zip": {
-        "invalid file": "Kesalahan mengekstrak {0}. Berkas tidak valid.",
-        "incompleteExtract": "Tidak lengkap. Ditemukan {0} dari {1} entri.",
-        "notFound": "{0} tidak ditemukan di dalam zip."
     },
     "vs/base/browser/ui/keybindingLabel/keybindingLabel": {
         "unbound": "Unbound"
@@ -77,15 +77,15 @@
         "treeAriaLabel": "Pemilih Cepat",
         "quickInput.visibleCount": "{0} Hasil"
     },
-    "vs/base/browser/ui/tree/treeDefaults": {
-        "collapse all": "Collapse All"
+    "vs/base/browser/ui/findinput/findInput": {
+        "defaultLabel": "masukan"
     },
     "vs/base/browser/ui/findinput/replaceInput": {
         "defaultLabel": "masukan",
         "label.preserveCaseCheckbox": "Preserve Case"
     },
-    "vs/base/browser/ui/findinput/findInput": {
-        "defaultLabel": "masukan"
+    "vs/base/browser/ui/tree/treeDefaults": {
+        "collapse all": "Collapse All"
     },
     "vs/base/browser/ui/inputbox/inputBox": {
         "alertErrorMessage": "Kesalahan: {0}",
@@ -105,6 +105,7 @@
         "found": "Matched {0} out of {1} elements"
     },
     "vs/base/browser/ui/menu/menubar": {
+        "mAppMenu": "Application Menu",
         "mMore": "..."
     },
     "vs/editor/common/standaloneStrings": {
@@ -206,6 +207,7 @@
         "codeActionsOnSave.fixAll": "Controls whether auto fix action should be run on file save.",
         "codeActionsOnSave": "Code action kinds to be run on save.",
         "codeActionsOnSaveTimeout": "Timeout in milliseconds after which the code actions that are run on save are cancelled.",
+        "maxComputationTime": "Timeout in milliseconds after which diff computation is cancelled. Use 0 for no timeout.",
         "sideBySide": "Controls whether the diff editor shows the diff side by side or inline.",
         "ignoreTrimWhitespace": "Controls whether the diff editor shows changes in leading or trailing whitespace as diffs.",
         "renderIndicators": "Controls whether the diff editor shows +/- indicators for added/removed changes."
@@ -231,6 +233,8 @@
         "find.autoFindInSelection": "Controls whether the find operation is carried out on selected text or the entire file in the editor.",
         "find.globalFindClipboard": "Controls whether the Find Widget should read or modify the shared find clipboard on macOS.",
         "find.addExtraSpaceOnTop": "Controls whether the Find Widget should add extra lines on top of the editor. When true, you can scroll beyond the first line when the Find Widget is visible.",
+        "fontLigatures": "Enables/Disables font ligatures.",
+        "fontFeatureSettings": "Explicit font-feature-settings.",
         "fontSize": "Mengatur ukuran font dalam piksel.",
         "editor.gotoLocation.multiple": "Controls the behavior of 'Go To' commands, like Go To Definition, when multiple target locations exist.",
         "editor.gotoLocation.multiple.peek": "Show peek view of the results (default)",
@@ -243,7 +247,8 @@
         "lineHeight": "Controls the line height. Use 0 to compute the line height from the font size.",
         "minimap.enabled": "Controls whether the minimap is shown.",
         "minimap.side": "Mengontrol sisi mana yang digunakan untuk menampilkan minimap.",
-        "minimap.showSlider": "Mengatur apakah minimap slider disembunyikan secara otomatis.",
+        "minimap.showSlider": "Controls when the minimap slider is shown.",
+        "minimap.scale": "Scale of content drawn in the minimap.",
         "minimap.renderCharacters": "Render the actual characters on a line as opposed to color blocks.",
         "minimap.maxColumn": "Limit the width of the minimap to render at most a certain number of columns.",
         "parameterHints.enabled": "Enables a pop-up that shows parameter documentation and type information as you type.",
@@ -258,13 +263,13 @@
         "lineNumbers.interval": "Nomor baris ditampilkan setiap 10 baris.",
         "lineNumbers": "Mengatur tampilan pada nomor baris.",
         "rulers": "Render vertical rulers after a certain number of monospace characters. Use multiple values for multiple rulers. No rulers are drawn if array is empty.",
+        "suggest.overwriteOnAccept": "Controls whether words are overwritten when accepting completions.",
         "suggest.filterGraceful": "Controls whether filtering and sorting suggestions accounts for small typos.",
         "suggest.localityBonus": "Controls whether sorting favours words that appear close to the cursor.",
         "suggest.shareSuggestSelections": "Controls whether remembered suggestion selections are shared between multiple workspaces and windows (needs `#editor.suggestSelection#`).",
         "suggest.snippetsPreventQuickSuggestions": "Control whether an active snippet prevents quick suggestions.",
         "suggest.showIcons": "Controls whether to show or hide icons in suggestions.",
         "suggest.maxVisibleSuggestions": "Controls how many suggestions IntelliSense will show before showing a scrollbar (maximum 15).",
-        "suggest.filtered": "Controls whether some suggestion types should be filtered from IntelliSense. A list of suggestion types can be found here: https://code.visualstudio.com/docs/editor/intellisense#_types-of-completions.",
         "suggest.filtered.method": "When set to `false` IntelliSense never shows `method` suggestions.",
         "suggest.filtered.function": "When set to `false` IntelliSense never shows `function` suggestions.",
         "suggest.filtered.constructor": "When set to `false` IntelliSense never shows `constructor` suggestions.",
@@ -321,7 +326,6 @@
         "folding": "Controls whether the editor has code folding enabled.",
         "foldingStrategy": "Controls the strategy for computing folding ranges. `auto` uses a language specific folding strategy, if available. `indentation` uses the indentation based folding strategy.",
         "fontFamily": "Mengatur jenis font.",
-        "fontLigatures": "Enables/Disables font ligatures.",
         "fontWeight": "Mengatur ketebalan font.",
         "formatOnPaste": "Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.",
         "formatOnType": "Controls whether the editor should automatically format the line after typing.",
@@ -411,15 +415,12 @@
     "vs/editor/browser/controller/textAreaHandler": {
         "accessibilityOffAriaLabel": "Editor sedang tidak bisa digunakan. Tekan Alt+F1 untuk opsi."
     },
-    "vs/editor/contrib/caretOperations/transpose": {
-        "transposeLetters.label": "Ubah urutan huruf"
-    },
     "vs/editor/contrib/caretOperations/caretOperations": {
         "caret.moveLeft": "Pindahkan tanda sisipan ke kiri",
         "caret.moveRight": "Pindahkan tanda sisipan ke kanan"
     },
-    "vs/editor/contrib/cursorUndo/cursorUndo": {
-        "cursor.undo": "Soft Undo"
+    "vs/editor/contrib/caretOperations/transpose": {
+        "transposeLetters.label": "Ubah urutan huruf"
     },
     "vs/editor/contrib/comment/comment": {
         "comment.line": "Beralih baris komentar",
@@ -429,13 +430,17 @@
         "comment.block": "Toggle Block Comment",
         "miToggleBlockComment": "Toggle &&Block Comment"
     },
+    "vs/editor/contrib/cursorUndo/cursorUndo": {
+        "cursor.undo": "Soft Undo",
+        "cursor.redo": "Soft Redo"
+    },
+    "vs/editor/contrib/parameterHints/parameterHints": {
+        "parameterHints.trigger.label": "Trigger Parameter Hints"
+    },
     "vs/editor/contrib/fontZoom/fontZoom": {
         "EditorFontZoomIn.label": "Editor Font Zoom In",
         "EditorFontZoomOut.label": "Editor Font Zoom Out",
         "EditorFontZoomReset.label": "Editor Font Zoom Reset"
-    },
-    "vs/editor/contrib/parameterHints/parameterHints": {
-        "parameterHints.trigger.label": "Trigger Parameter Hints"
     },
     "vs/editor/contrib/toggleTabFocusMode/toggleTabFocusMode": {
         "toggle.tabMovesFocus": "Toggle Tab Key Moves Focus",
@@ -463,22 +468,22 @@
     "vs/editor/contrib/contextmenu/contextmenu": {
         "action.showContextMenu.label": "Tampilkan menu konteks editor"
     },
-    "vs/editor/contrib/format/formatActions": {
-        "formatDocument.label": "Format Dokumen",
-        "formatSelection.label": "Format Pilihan"
-    },
     "vs/editor/contrib/hover/hover": {
         "showHover": "Tampilkan hover"
-    },
-    "vs/editor/contrib/goToDefinition/goToDefinitionMouse": {
-        "multipleResults": "Klik untuk menampilkan {0} definisi."
     },
     "vs/editor/contrib/inPlaceReplace/inPlaceReplace": {
         "InPlaceReplaceAction.previous.label": "Replace with Previous Value",
         "InPlaceReplaceAction.next.label": "Replace with Next Value"
     },
+    "vs/editor/contrib/format/formatActions": {
+        "formatDocument.label": "Format Dokumen",
+        "formatSelection.label": "Format Pilihan"
+    },
+    "vs/editor/contrib/goToDefinition/goToDefinitionMouse": {
+        "multipleResults": "Klik untuk menampilkan {0} definisi."
+    },
     "vs/editor/contrib/links/links": {
-        "links.navigate.executeCmd": "Execute command",
+        "links.navigate.executeCmd": "Eksekusi perintah",
         "links.navigate.follow": "Follow link",
         "links.navigate.kb.meta.mac": "cmd + click",
         "links.navigate.kb.meta": "ctrl + click",
@@ -488,16 +493,16 @@
         "missing.url": "Failed to open this link because its target is missing.",
         "label": "Buka Tautan"
     },
+    "vs/editor/contrib/referenceSearch/referenceSearch": {
+        "meta.titleReference": " – {0} references",
+        "references.action.label": "Peek References"
+    },
     "vs/editor/contrib/rename/rename": {
         "no result": "Tidak ada hasil.",
         "resolveRenameLocationFailed": "An unknown error occurred while resolving rename location",
         "aria": "Successfully renamed '{0}' to '{1}'. Summary: {2}",
         "rename.failed": "Ubah nama gagal untuk dieksekusi.",
         "rename.label": "Rename Symbol"
-    },
-    "vs/editor/contrib/referenceSearch/referenceSearch": {
-        "meta.titleReference": " – {0} references",
-        "references.action.label": "Peek References"
     },
     "vs/editor/contrib/smartSelect/smartSelect": {
         "smartSelect.expand": "Expand Selection",
@@ -507,6 +512,14 @@
     },
     "vs/editor/contrib/referenceSearch/peekViewWidget": {
         "label.close": "Tutup"
+    },
+    "vs/editor/contrib/gotoError/gotoError": {
+        "markerAction.next.label": "Go to Next Problem (Error, Warning, Info)",
+        "markerAction.previous.label": "Go to Previous Problem (Error, Warning, Info)",
+        "markerAction.nextInFiles.label": "Go to Next Problem in Files (Error, Warning, Info)",
+        "markerAction.previousInFiles.label": "Go to Previous Problem in Files (Error, Warning, Info)",
+        "miGotoNextProblem": "Next &&Problem",
+        "miGotoPreviousProblem": "Previous &&Problem"
     },
     "vs/editor/contrib/goToDefinition/goToDefinitionCommands": {
         "noResultWord": "Definisi untuk '{0}' tidak ditemukan",
@@ -534,18 +547,6 @@
         "miGotoTypeDefinition": "Go to &&Type Definition",
         "miGotoImplementation": "Go to &&Implementation"
     },
-    "vs/editor/contrib/gotoError/gotoError": {
-        "markerAction.next.label": "Go to Next Problem (Error, Warning, Info)",
-        "markerAction.previous.label": "Go to Previous Problem (Error, Warning, Info)",
-        "markerAction.nextInFiles.label": "Go to Next Problem in Files (Error, Warning, Info)",
-        "markerAction.previousInFiles.label": "Go to Previous Problem in Files (Error, Warning, Info)",
-        "miGotoNextProblem": "Next &&Problem",
-        "miGotoPreviousProblem": "Previous &&Problem"
-    },
-    "vs/editor/contrib/suggest/suggestController": {
-        "arai.alert.snippet": "Accepting '{0}' made {1} additional edits",
-        "suggest.trigger.label": "Trigger Suggest"
-    },
     "vs/editor/contrib/wordHighlighter/wordHighlighter": {
         "wordHighlight": "Background color of a symbol during read-access, like reading a variable. The color must not be opaque so as not to hide underlying decorations.",
         "wordHighlightStrong": "Background color of a symbol during write-access, like writing to a variable. The color must not be opaque so as not to hide underlying decorations.",
@@ -557,10 +558,15 @@
         "wordHighlight.previous.label": "Go to Previous Symbol Highlight",
         "wordHighlight.trigger.label": "Sorot simbol trigger"
     },
+    "vs/editor/contrib/suggest/suggestController": {
+        "arai.alert.snippet": "Accepting '{0}' made {1} additional edits",
+        "suggest.trigger.label": "Trigger Suggest"
+    },
     "vs/editor/contrib/folding/folding": {
         "unfoldAction.label": "Membuka",
         "unFoldRecursivelyAction.label": "Membuka Secara Rekursif",
         "foldAction.label": "Lipat",
+        "toggleFoldAction.label": "Toggle Fold",
         "foldRecursivelyAction.label": "Lipat Secara Rekursif",
         "foldAllBlockComments.label": "Lipat semua blok komentar",
         "foldAllMarkerRegions.label": "Lipat semua wilayah",
@@ -585,6 +591,8 @@
         "miCopyLinesUp": "&&Copy Line Up",
         "lines.copyDown": "Salin Baris Ke Bawah",
         "miCopyLinesDown": "Co&&py Line Down",
+        "duplicateSelection": "Duplicate Selection",
+        "miDuplicateSelection": "&&Duplicate Selection",
         "lines.moveUp": "Pindahkan Baris Ke Atas",
         "miMoveLinesUp": "Mo&&ve Line Up",
         "lines.moveDown": "Pindahkan Baris Ke Bawah",
@@ -654,9 +662,6 @@
         "hint1n": "Made 1 formatting edit between lines {0} and {1}",
         "hintnn": "Made {0} formatting edits between lines {1} and {2}"
     },
-    "vs/editor/contrib/message/messageController": {
-        "editor.readonly": "Cannot edit in read-only editor"
-    },
     "vs/editor/contrib/referenceSearch/referencesModel": {
         "aria.oneReference": "symbol in {0} on line {1} at column {2}",
         "aria.fileReferences.1": "1 symbol in {0}, full path {1}",
@@ -665,6 +670,9 @@
         "aria.result.1": "Found 1 symbol in {0}",
         "aria.result.n1": "Found {0} symbols in {1}",
         "aria.result.nm": "Found {0} symbols in {1} files"
+    },
+    "vs/editor/contrib/message/messageController": {
+        "editor.readonly": "Cannot edit in read-only editor"
     },
     "vs/editor/contrib/snippet/snippetVariables": {
         "Sunday": "Sunday",
@@ -706,10 +714,6 @@
         "NovemberShort": "Nov",
         "DecemberShort": "Dec"
     },
-    "vs/editor/contrib/goToDefinition/goToDefinitionResultsNavigation": {
-        "location.kb": "Symbol {0} of {1}, {2} for next",
-        "location": "Symbol {0} of {1}"
-    },
     "vs/editor/contrib/gotoError/gotoErrorWidget": {
         "problems": "{0} of {1} problems",
         "change": "{0} of {1} problem",
@@ -717,6 +721,10 @@
         "editorMarkerNavigationWarning": "Editor marker navigation widget warning color.",
         "editorMarkerNavigationInfo": "Editor marker navigation widget info color.",
         "editorMarkerNavigationBackground": "Editor marker navigation widget background."
+    },
+    "vs/editor/contrib/goToDefinition/goToDefinitionResultsNavigation": {
+        "location.kb": "Symbol {0} of {1}, {2} for next",
+        "location": "Symbol {0} of {1}"
     },
     "vs/editor/contrib/hover/modesContentHover": {
         "modesContentHover.loading": "Memuat...",
@@ -796,10 +804,6 @@
         "referencesCount": "{0} referensi",
         "referenceCount": "{0} referensi"
     },
-    "vs/editor/contrib/codeAction/lightBulbWidget": {
-        "quickFixWithKb": "Tampilkan perbaikan ({0})",
-        "quickFix": "Tampilkan perbaikan"
-    },
     "vs/editor/contrib/find/findWidget": {
         "label.find": "Temukan",
         "placeholder.find": "Temukan",
@@ -821,6 +825,11 @@
         "ariaSearchNoResultWithLineNumNoCurrentMatch": "{0} found for {1}",
         "ctrlEnter.keybindingChanged": "Ctrl+Enter now inserts line break instead of replacing all. You can modify the keybinding for editor.action.replaceAll to override this behavior."
     },
+    "vs/editor/contrib/codeAction/lightBulbWidget": {
+        "prefferedQuickFixWithKb": "Show Fixes. Preferred Fix Available ({0})",
+        "quickFixWithKb": "Tampilkan perbaikan ({0})",
+        "quickFix": "Tampilkan perbaikan"
+    },
     "vs/editor/contrib/indentation/indentation": {
         "indentationToSpaces": "Convert Indentation to Spaces",
         "indentationToTabs": "Convert Indentation to Tabs",
@@ -832,9 +841,10 @@
         "editor.reindentlines": "Indentasi ulang baris",
         "editor.reindentselectedlines": "Reindent Selected Lines"
     },
-    "vs/platform/extensionManagement/common/extensionManagement": {
-        "extensions": "Ekstensi",
-        "preferences": "Preferensi"
+    "vs/platform/environment/node/argvHelper": {
+        "unknownOption": "Option '{0}' is unknown. Ignoring.",
+        "multipleValues": "Option '{0}' is defined more than once. Using value '{1}.'",
+        "gotoValidation": "Argumen dalam mode `--goto` harus dalam format `BERKAS(:BARIS(:KARAKTER))`."
     },
     "vs/platform/request/common/request": {
         "httpConfigurationTitle": "HTTP",
@@ -846,14 +856,6 @@
         "proxySupportOverride": "Enable proxy support for extensions, override request options.",
         "proxySupport": "Use the proxy support for extensions.",
         "systemCertificates": "Controls whether CA certificates should be loaded from the OS. (On Windows and macOS a reload of the window is required after turning this off.)"
-    },
-    "vs/platform/telemetry/common/telemetryService": {
-        "telemetryConfigurationTitle": "Telemetri",
-        "telemetry.enableTelemetry": "Enable usage data and errors to be sent to a Microsoft online service."
-    },
-    "vs/platform/files/electron-browser/diskFileSystemProvider": {
-        "binFailed": "Failed to move '{0}' to the recycle bin",
-        "trashFailed": "Failed to move '{0}' to the trash"
     },
     "vs/platform/update/common/update.config.contribution": {
         "updateConfigurationTitle": "Pembaruan",
@@ -867,10 +869,29 @@
         "enableWindowsBackgroundUpdates": "Enable to download and install new VS Code Versions in the background on Windows",
         "showReleaseNotes": "Show Release Notes after an update. The Release Notes are fetched from a Microsoft online service."
     },
-    "vs/platform/environment/node/argvHelper": {
-        "unknownOption": "Option '{0}' is unknown. Ignoring.",
-        "multipleValues": "Option '{0}' is defined more than once. Using value '{1}.'",
-        "gotoValidation": "Argumen dalam mode `--goto` harus dalam format `BERKAS(:BARIS(:KARAKTER))`."
+    "vs/platform/extensionManagement/common/extensionManagement": {
+        "extensions": "Ekstensi",
+        "preferences": "Preferensi"
+    },
+    "vs/platform/telemetry/common/telemetryService": {
+        "telemetryConfigurationTitle": "Telemetri",
+        "telemetry.enableTelemetry": "Enable usage data and errors to be sent to a Microsoft online service."
+    },
+    "vs/platform/extensionManagement/node/extensionManagementUtil": {
+        "invalidManifest": "VSIX invalid: package.json is not a JSON file."
+    },
+    "vs/platform/files/electron-browser/diskFileSystemProvider": {
+        "binFailed": "Failed to move '{0}' to the recycle bin",
+        "trashFailed": "Failed to move '{0}' to the trash"
+    },
+    "vs/platform/userDataSync/common/userDataSync": {
+        "configurationSync": "Configuration Sync",
+        "configurationSync.enable": "When enabled, synchronises configuration that includes Settings and Extensions.",
+        "configurationSync.enableSettings": "When enabled settings are synchronised while synchronizing configuration.",
+        "configurationSync.enableExtensions": "When enabled extensions are synchronised while synchronizing configuration.",
+        "configurationSync.extensionsToIgnore": "Configure extensions to be ignored while syncing.",
+        "configurationSync.settingsToIgnore": "Configure settings to be ignored while syncing. \nDefault Ignored Settings:\n\n{0}",
+        "configurationSync.enableAuth": "Enables authentication and requires VS Code restart when changed"
     },
     "vs/platform/environment/node/argv": {
         "optionsUpperCase": "Opsi",
@@ -914,9 +935,6 @@
         "unknownVersion": "Unknown version",
         "unknownCommit": "Unknown commit"
     },
-    "vs/platform/extensionManagement/node/extensionManagementUtil": {
-        "invalidManifest": "VSIX invalid: package.json is not a JSON file."
-    },
     "vs/platform/label/common/label": {
         "untitledWorkspace": "Tanpa Nama (Ruang Kerja)",
         "workspaceName": "{0} (Ruang Kerja)"
@@ -926,12 +944,18 @@
         "sev.warning": "Peringatan",
         "sev.info": "Info"
     },
-    "vs/platform/workspaces/common/workspaces": {
-        "codeWorkspace": "Ruang Kerja Kode"
-    },
     "vs/platform/dialogs/common/dialogs": {
         "moreFile": "...1 berkas tambahan tidak ditampilkan",
         "moreFiles": "...{0} berkas tambahan tidak ditampilkan"
+    },
+    "vs/platform/workspaces/common/workspaces": {
+        "codeWorkspace": "Ruang Kerja Kode"
+    },
+    "vs/platform/files/node/diskFileSystemProvider": {
+        "fileExists": "File already exists",
+        "fileNotExists": "File does not exist",
+        "moveError": "Unable to move '{0}' into '{1}' ({2}).",
+        "copyError": "Unable to copy '{0}' into '{1}' ({2})."
     },
     "vs/platform/configuration/common/configurationRegistry": {
         "defaultConfigurations.title": "Timpa konfigurasi bawaan",
@@ -962,15 +986,6 @@
         "err.readonly": "Resource can not be modified.",
         "unknownError": "Unknown Error"
     },
-    "vs/platform/files/node/diskFileSystemProvider": {
-        "fileExists": "File already exists",
-        "fileNotExists": "File does not exist",
-        "moveError": "Unable to move '{0}' into '{1}' ({2}).",
-        "copyError": "Unable to copy '{0}' into '{1}' ({2})."
-    },
-    "vs/platform/userDataSync/common/settingsSync": {
-        "errorInvalidSettings": "Unable to sync settings. Please resolve conflicts without any errors/warnings and try again."
-    },
     "vs/platform/extensionManagement/node/extensionManagementService": {
         "invalidManifest": "Ekstensi tidak tepat: package.json bukan merupakan berkas JSON.",
         "incompatible": "Unable to install extension '{0}' as it is not compatible with VS Code '{1}'.",
@@ -991,6 +1006,9 @@
         "multipleDependentsError": "Tidak dapat melepas ekstensi '{0}'. Ekstensi '{1}', '{2}', dsb. bergantung pada ini.",
         "notExists": "Ekstensi tidak dapat ditemukan"
     },
+    "vs/platform/userDataSync/common/settingsSync": {
+        "errorInvalidSettings": "Unable to sync settings. Please resolve conflicts without any errors/warnings and try again."
+    },
     "vs/platform/list/browser/listService": {
         "workbenchConfigurationTitle": "Workbench",
         "multiSelectModifier.ctrlCmd": "Petakan ke `Control` pada Windows dan Linux, dan `Command` pada macOS.",
@@ -1007,12 +1025,6 @@
         "keyboardNavigationSettingKey.filter": "Filter keyboard navigation will filter out and hide all the elements which do not match the keyboard input.",
         "keyboardNavigationSettingKey": "Controls the keyboard navigation style for lists and trees in the workbench. Can be simple, highlight and filter.",
         "automatic keyboard navigation setting": "Controls whether keyboard navigation in lists and trees is automatically triggered simply by typing. If set to `false`, keyboard navigation is only triggered when executing the `list.toggleKeyboardNavigation` command, for which you can assign a keyboard shortcut."
-    },
-    "vs/platform/extensions/common/extensionValidator": {
-        "versionSyntax": "Could not parse `engines.vscode` value {0}. Please use, for example: ^1.22.0, ^1.22.x, etc.",
-        "versionSpecificity1": "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions before 1.0.0, please define at a minimum the major and minor desired version. E.g. ^0.10.0, 0.10.x, 0.11.0, etc.",
-        "versionSpecificity2": "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions after 1.0.0, please define at a minimum the major desired version. E.g. ^1.10.0, 1.10.x, 1.x.x, 2.x.x, etc.",
-        "versionMismatch": "Ekstensi tidak kompatibel dengan Code {0}. Ekstensi membutuhkan: {1}."
     },
     "vs/platform/theme/common/colorRegistry": {
         "foreground": "Warna latar keseluruhan. Hanya digunakan jika tidak ditimpa oleh komponen.",
@@ -1148,14 +1160,42 @@
         "overviewRulerFindMatchForeground": "Overview ruler marker color for find matches. The color must not be opaque so as not to hide underlying decorations.",
         "overviewRulerSelectionHighlightForeground": "Overview ruler marker color for selection highlights. The color must not be opaque so as not to hide underlying decorations.",
         "minimapFindMatchHighlight": "Minimap marker color for find matches.",
-        "minimapSelectionHighlight": "Minimap marker color for the current editor selection."
+        "minimapSelectionHighlight": "Minimap marker color for the editor selection.",
+        "problemsErrorIconForeground": "The color used for the problems error icon.",
+        "problemsWarningIconForeground": "The color used for the problems warning icon.",
+        "problemsInfoIconForeground": "The color used for the problems info icon."
+    },
+    "vs/platform/dialogs/electron-main/dialogs": {
+        "open": "Buka",
+        "openFolder": "Open Folder",
+        "openFile": "Buka Berkas",
+        "openWorkspaceTitle": "Buka Ruang Kerja",
+        "openWorkspace": "&&Open"
+    },
+    "vs/platform/extensions/common/extensionValidator": {
+        "versionSyntax": "Could not parse `engines.vscode` value {0}. Please use, for example: ^1.22.0, ^1.22.x, etc.",
+        "versionSpecificity1": "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions before 1.0.0, please define at a minimum the major and minor desired version. E.g. ^0.10.0, 0.10.x, 0.11.0, etc.",
+        "versionSpecificity2": "Version specified in `engines.vscode` ({0}) is not specific enough. For vscode versions after 1.0.0, please define at a minimum the major desired version. E.g. ^1.10.0, 1.10.x, 1.x.x, 2.x.x, etc.",
+        "versionMismatch": "Ekstensi tidak kompatibel dengan Code {0}. Ekstensi membutuhkan: {1}."
     },
     "vs/platform/actions/browser/menuEntryActionViewItem": {
         "titleAndKb": "{0} ({1})"
     },
+    "vs/platform/workspaces/electron-main/workspacesMainService": {
+        "ok": "OK",
+        "workspaceOpenedMessage": "Tidak dapat menyimpan ruang kerja '{0}'",
+        "workspaceOpenedDetail": "The workspace is already opened in another window. Please close that window first and then try again."
+    },
     "vs/platform/keybinding/common/abstractKeybindingService": {
         "first.chord": "({0}) telah ditekan. Menunggu kombinasi tombol kedua...",
         "missing.chord": "Kombinasi tombol ({0}, {1}) bukanlah sebuah perintah."
+    },
+    "vs/platform/workspaces/electron-main/workspacesHistoryMainService": {
+        "newWindow": "Jendela Baru",
+        "newWindowDesc": "Buka jendela baru",
+        "recentFolders": "Ruang kerja terakhir",
+        "folderDesc": "{0} {1}",
+        "workspaceDesc": "{0} {1}"
     },
     "vs/platform/issue/electron-main/issueMainService": {
         "local": "Local",
@@ -1165,13 +1205,6 @@
         "confirmCloseIssueReporter": "Your input will not be saved. Are you sure you want to close this window?",
         "issueReporter": "Pelapor Masalah",
         "processExplorer": "Penjelajah Proses."
-    },
-    "vs/platform/history/electron-main/historyMainService": {
-        "newWindow": "Jendela Baru",
-        "newWindowDesc": "Buka jendela baru",
-        "recentFolders": "Ruang kerja terakhir",
-        "folderDesc": "{0} {1}",
-        "workspaceDesc": "{0} {1}"
     },
     "vs/platform/menubar/electron-main/menubar": {
         "miNewWindow": "New &&Window",
@@ -1207,6 +1240,13 @@
         "miInstallUpdate": "Install &&Update...",
         "miInstallingUpdate": "Memasang Pembaruan...",
         "miRestartToUpdate": "Restart to &&Update"
+    },
+    "vs/platform/windows/electron-main/windowsMainService": {
+        "pathNotExistTitle": "Path tidak tersedia",
+        "pathNotExistDetail": "The path '{0}' does not seem to exist anymore on disk.",
+        "uriInvalidTitle": "URI can not be opened",
+        "uriInvalidDetail": "The URI '{0}' is not valid and can not be opened.",
+        "ok": "OK"
     },
     "win32/i18n/Default": {
         "SetupAppTitle": "Pemasangan",
@@ -1458,17 +1498,6 @@
         "startupUserDataAndExtensionsDirErrorDetail": "Please make sure the following directories are writeable:\n\n{0}",
         "close": "&&Close"
     },
-    "vs/code/electron-browser/processExplorer/processExplorerMain": {
-        "cpu": "CPU %",
-        "memory": "Memory (MB)",
-        "pid": "pid",
-        "name": "Name",
-        "killProcess": "Kill Process",
-        "forceKillProcess": "Force Kill Process",
-        "copy": "Salin",
-        "copyAll": "Copy All",
-        "debug": "Debug"
-    },
     "vs/code/node/cliProcessMain": {
         "notFound": "Ekstensi '{0}' tidak ditemukan.",
         "notInstalled": "Ekstensi '{0}' belum terinstal.",
@@ -1485,6 +1514,17 @@
         "successInstall": "Extension '{0}' v{1} was successfully installed.",
         "uninstalling": "Uninstalling {0}...",
         "successUninstall": "Extension '{0}' was successfully uninstalled!"
+    },
+    "vs/code/electron-browser/processExplorer/processExplorerMain": {
+        "cpu": "CPU %",
+        "memory": "Memory (MB)",
+        "pid": "pid",
+        "name": "Name",
+        "killProcess": "Kill Process",
+        "forceKillProcess": "Force Kill Process",
+        "copy": "Salin",
+        "copyAll": "Copy All",
+        "debug": "Debug"
     },
     "vs/code/electron-browser/issue/issueReporterMain": {
         "hide": "hide",
@@ -1542,12 +1582,7 @@
         "authRequire": "Proxy Authentication Required",
         "proxyauth": "The proxy {0} requires authentication."
     },
-    "vs/code/electron-main/windows": {
-        "pathNotExistTitle": "Path tidak tersedia",
-        "pathNotExistDetail": "The path '{0}' does not seem to exist anymore on disk.",
-        "uriInvalidTitle": "URI can not be opened",
-        "uriInvalidDetail": "The URI '{0}' is not valid and can not be opened.",
-        "ok": "OK",
+    "vs/code/electron-main/window": {
         "reopen": "&&Reopen",
         "wait": "&&Keep Waiting",
         "close": "&&Close",
@@ -1555,19 +1590,9 @@
         "appStalledDetail": "You can reopen or close the window or keep waiting.",
         "appCrashed": "The window has crashed",
         "appCrashedDetail": "We are sorry for the inconvenience! You can reopen the window to continue where you left off.",
-        "open": "Buka",
-        "openFolder": "Open Folder",
-        "openFile": "Buka Berkas",
-        "openWorkspaceTitle": "Buka Ruang Kerja",
-        "openWorkspace": "&&Open",
-        "workspaceOpenedMessage": "Tidak dapat menyimpan ruang kerja '{0}'",
-        "workspaceOpenedDetail": "The workspace is already opened in another window. Please close that window first and then try again."
-    },
-    "vs/code/electron-main/window": {
         "hiddenMenuBar": "You can still access the menu bar by pressing the Alt-key."
     },
     "vs/workbench/electron-browser/desktop.contribution": {
-        "file": "File",
         "view": "Tampilkan",
         "workspaces": "Workspaces",
         "newTab": "New Window Tab",
@@ -1578,8 +1603,6 @@
         "toggleWindowTabsBar": "Toggle Window Tabs Bar",
         "developer": "Developer",
         "miSaveWorkspaceAs": "Save Workspace As...",
-        "miCloseFolder": "Close &&Folder",
-        "miCloseWorkspace": "Close &&Workspace",
         "miCloseWindow": "Clos&&e Window",
         "miExit": "E&&xit",
         "miZoomIn": "&&Zoom In",
@@ -1618,7 +1641,18 @@
         "window.nativeFullScreen": "Controls if native full-screen should be used on macOS. Disable this option to prevent macOS from creating a new space when going full-screen.",
         "window.clickThroughInactive": "If enabled, clicking on an inactive window will both activate the window and trigger the element under the mouse if it is clickable. If disabled, clicking anywhere on an inactive window will activate it only and a second click is required on the element.",
         "telemetryConfigurationTitle": "Telemetri",
-        "telemetry.enableCrashReporting": "Enable crash reports to be sent to a Microsoft online service. \nThis option requires restart to take effect."
+        "telemetry.enableCrashReporting": "Enable crash reports to be sent to a Microsoft online service. \nThis option requires restart to take effect.",
+        "argv.locale": "The display Language to use. Picking a different language requires the associated language pack to be installed.",
+        "argv.disableHardwareAcceleration": "Disables hardware acceleration. ONLY change this option if you encounter graphic issues.",
+        "argv.disableColorCorrectRendering": "Resolves issues around color profile selection. ONLY change this option if you encounter graphic issues."
+    },
+    "vs/workbench/browser/actions/textInputActions": {
+        "undo": "Undo",
+        "redo": "Redo",
+        "cut": "Potong",
+        "copy": "Salin",
+        "paste": "Tempel",
+        "selectAll": "Select All"
     },
     "vs/workbench/browser/actions/workspaceCommands": {
         "addFolderToWorkspace": "Add Folder to Workspace...",
@@ -1635,26 +1669,30 @@
         "screencastMode.location.verticalPosition": "Controls the vertical offset of the screencast mode overlay from the bottom as a percentage of the workbench height.",
         "screencastMode.onlyKeyboardShortcuts": "Only show keyboard shortcuts in Screencast Mode."
     },
-    "vs/workbench/electron-browser/actions/developerActions": {
-        "toggleDevTools": "Toggle Developer Tools",
-        "toggleSharedProcess": "Toggle Shared Process"
-    },
-    "vs/workbench/browser/actions/workspaceActions": {
-        "openFile": "Open File...",
-        "openFolder": "Open Folder...",
-        "openFileFolder": "Buka...",
-        "openWorkspaceAction": "Open Workspace...",
-        "openWorkspaceConfigFile": "Open Workspace Configuration File",
-        "globalRemoveFolderFromWorkspace": "Remove Folder from Workspace...",
-        "workspaces": "Workspaces",
-        "miAddFolderToWorkspace": "A&&dd Folder to Workspace..."
-    },
     "vs/workbench/browser/actions/navigationActions": {
         "navigateLeft": "Navigate to the View on the Left",
         "navigateRight": "Navigate to the View on the Right",
         "navigateUp": "Navigate to the View Above",
         "navigateDown": "Navigate to the View Below",
         "view": "Tampilkan"
+    },
+    "vs/workbench/browser/actions/workspaceActions": {
+        "openFile": "Open File...",
+        "openFolder": "Open Folder...",
+        "openFileFolder": "Buka...",
+        "openWorkspaceAction": "Open Workspace...",
+        "closeWorkspace": "Close Workspace",
+        "noWorkspaceOpened": "There is currently no workspace opened in this instance to close.",
+        "openWorkspaceConfigFile": "Open Workspace Configuration File",
+        "globalRemoveFolderFromWorkspace": "Remove Folder from Workspace...",
+        "workspaces": "Workspaces",
+        "miAddFolderToWorkspace": "A&&dd Folder to Workspace...",
+        "miCloseFolder": "Close &&Folder",
+        "miCloseWorkspace": "Close &&Workspace"
+    },
+    "vs/workbench/browser/parts/sidebar/sidebarPart": {
+        "focusSideBar": "Focus into Side Bar",
+        "viewCategory": "View"
     },
     "vs/workbench/api/common/configurationExtensionPoint": {
         "vscode.extension.contributes.configuration.title": "A summary of the settings. This label will be used in the settings file as separating comment.",
@@ -1681,18 +1719,18 @@
         "workspaceConfig.uri.description": "URI of the folder",
         "workspaceConfig.settings.description": "Workspace settings",
         "workspaceConfig.launch.description": "Workspace launch configurations",
+        "workspaceConfig.tasks.description": "Workspace task configurations",
         "workspaceConfig.extensions.description": "Workspace extensions",
         "unknownWorkspaceProperty": "Unknown workspace configuration property"
     },
-    "vs/workbench/browser/parts/sidebar/sidebarPart": {
-        "focusSideBar": "Focus into Side Bar",
-        "viewCategory": "View"
-    },
     "vs/workbench/electron-browser/actions/workspaceActions": {
         "saveWorkspaceAsAction": "Save Workspace As...",
-        "duplicateWorkspaceInNewWindow": "Duplicate Workspace in New Window",
-        "closeWorkspace": "Close Workspace",
-        "noWorkspaceOpened": "There is currently no workspace opened in this instance to close."
+        "duplicateWorkspaceInNewWindow": "Duplicate Workspace in New Window"
+    },
+    "vs/workbench/electron-browser/actions/developerActions": {
+        "toggleDevTools": "Toggle Developer Tools",
+        "toggleSharedProcess": "Toggle Shared Process",
+        "configureRuntimeArguments": "Configure Runtime Arguments"
     },
     "vs/workbench/browser/workbench.contribution": {
         "workbenchConfigurationTitle": "Workbench",
@@ -1744,7 +1782,6 @@
         "settings.editor.json": "Use the JSON file editor.",
         "settings.editor.desc": "Determines which settings editor to use by default.",
         "workbench.enableExperiments": "Fetches experiments to run from a Microsoft online service.",
-        "workbench.octiconsUpdate.enabled": "Controls the visibility of the new Octicons style in the workbench.",
         "windowTitle": "Kontrol judul jendela berdasarkan editor aktif. Variabel diganti berdasarkan konteks:",
         "activeEditorShort": "`${activeEditorShort}`: the file name (e.g. myFile.txt).",
         "activeEditorMedium": "`${activeEditorMedium}`: the path of the file relative to the workspace folder (e.g. myFolder/myFileFolder/myFile.txt).",
@@ -1765,6 +1802,7 @@
         "window.menuBarVisibility.visible": "Menu is always visible even in full screen mode.",
         "window.menuBarVisibility.toggle": "Menu is hidden but can be displayed via Alt key.",
         "window.menuBarVisibility.hidden": "Menu is always hidden.",
+        "window.menuBarVisibility.compact": "Menu is displayed as a compact button in the sidebar.",
         "menuBarVisibility": "Control the visibility of the menu bar. A setting of 'toggle' means that the menu bar is hidden and a single press of the Alt key will show it. By default, the menu bar will be visible, unless the window is full screen.",
         "enableMenuBarMnemonics": "Controls whether the main menus can be opened via Alt-key shortcuts. Disabling mnemonics allows to bind these Alt-key shortcuts to editor commands instead.",
         "customMenuBarAltFocus": "Controls whether the menu bar will be focused by pressing the Alt-key. This setting has no effect on toggling the menu bar with the Alt-key.",
@@ -1779,7 +1817,36 @@
         "zenMode.hideStatusBar": "Controls whether turning on Zen Mode also hides the status bar at the bottom of the workbench.",
         "zenMode.hideActivityBar": "Controls whether turning on Zen Mode also hides the activity bar at the left of the workbench.",
         "zenMode.hideLineNumbers": "Controls whether turning on Zen Mode also hides the editor line numbers.",
-        "zenMode.restore": "Controls whether a window should restore to zen mode if it was exited in zen mode."
+        "zenMode.restore": "Controls whether a window should restore to zen mode if it was exited in zen mode.",
+        "zenMode.silentNotifications": "Controls whether notifications are shown while in zen mode. If true, only error notifications will pop out."
+    },
+    "vs/workbench/browser/actions/layoutActions": {
+        "view": "Tampilkan",
+        "toggleActivityBar": "Toggle Activity Bar Visibility",
+        "miShowActivityBar": "Show &&Activity Bar",
+        "toggleCenteredLayout": "Toggle Centered Layout",
+        "miToggleCenteredLayout": "Centered Layout",
+        "flipLayout": "Toggle Vertical/Horizontal Editor Layout",
+        "miToggleEditorLayout": "Flip &&Layout",
+        "toggleSidebarPosition": "Toggle Side Bar Position",
+        "moveSidebarRight": "Move Side Bar Right",
+        "moveSidebarLeft": "Move Side Bar Left",
+        "miMoveSidebarRight": "&&Move Side Bar Right",
+        "miMoveSidebarLeft": "&&Move Side Bar Left",
+        "toggleEditor": "Toggle Editor Area",
+        "miShowEditorArea": "Show &&Editor Area",
+        "toggleSidebar": "Toggle Side Bar Visibility",
+        "miAppearance": "&&Appearance",
+        "miShowSidebar": "Show &&Side Bar",
+        "toggleStatusbar": "Toggle Status Bar Visibility",
+        "miShowStatusbar": "Show S&&tatus Bar",
+        "toggleTabs": "Toggle Tab Visibility",
+        "toggleZenMode": "Toggle Zen Mode",
+        "miToggleZenMode": "Zen Mode",
+        "toggleMenuBar": "Toggle Menu Bar",
+        "miShowMenuBar": "Show Menu &&Bar",
+        "increaseViewSize": "Increase Current View Size",
+        "decreaseViewSize": "Decrease Current View Size"
     },
     "vs/workbench/browser/actions/helpActions": {
         "keybindingsReference": "Keyboard Shortcuts Reference",
@@ -1801,33 +1868,6 @@
         "miUserVoice": "&&Search Feature Requests",
         "miLicense": "View &&License",
         "miPrivacyStatement": "Privac&&y Statement"
-    },
-    "vs/workbench/browser/actions/layoutActions": {
-        "view": "View",
-        "toggleActivityBar": "Toggle Activity Bar Visibility",
-        "miShowActivityBar": "Show &&Activity Bar",
-        "toggleCenteredLayout": "Toggle Centered Layout",
-        "miToggleCenteredLayout": "Centered Layout",
-        "flipLayout": "Toggle Vertical/Horizontal Editor Layout",
-        "miToggleEditorLayout": "Flip &&Layout",
-        "toggleSidebarPosition": "Toggle Side Bar Position",
-        "moveSidebarRight": "Move Side Bar Right",
-        "moveSidebarLeft": "Move Side Bar Left",
-        "miMoveSidebarRight": "&&Move Side Bar Right",
-        "miMoveSidebarLeft": "&&Move Side Bar Left",
-        "toggleEditor": "Toggle Editor Area",
-        "toggleSidebar": "Toggle Side Bar Visibility",
-        "miAppearance": "&&Appearance",
-        "miShowSidebar": "Show &&Side Bar",
-        "toggleStatusbar": "Toggle Status Bar Visibility",
-        "miShowStatusbar": "Show S&&tatus Bar",
-        "toggleTabs": "Toggle Tab Visibility",
-        "toggleZenMode": "Toggle Zen Mode",
-        "miToggleZenMode": "Zen Mode",
-        "toggleMenuBar": "Toggle Menu Bar",
-        "miShowMenuBar": "Show Menu &&Bar",
-        "increaseViewSize": "Increase Current View Size",
-        "decreaseViewSize": "Decrease Current View Size"
     },
     "vs/workbench/api/common/menusExtensionPoint": {
         "requirearray": "isi menu harus dalam bentuk larik",
@@ -1887,7 +1927,7 @@
         "about": "About",
         "newWindow": "Jendela Baru",
         "file": "File",
-        "view": "View",
+        "view": "Tampilkan",
         "developer": "Developer",
         "help": "Help",
         "miNewWindow": "New &&Window",
@@ -1906,6 +1946,7 @@
         "vscode.extension.contributes.view.name": "The human-readable name of the view. Will be shown",
         "vscode.extension.contributes.view.when": "Condition which must be true to show this view",
         "vscode.extension.contributes.view.group": "Nested group in the viewlet",
+        "vscode.extension.contributes.view.remoteName": "The name of the remote type associated with this view",
         "vscode.extension.contributes.views": "Contributes views to the editor",
         "views.explorer": "Contributes views to Explorer container in the Activity bar",
         "views.debug": "Contributes views to Debug container in the Activity bar",
@@ -1918,7 +1959,7 @@
         "requireidstring": "property `{0}` is mandatory and must be of type `string`. Only alphanumeric characters, '_', and '-' are allowed.",
         "requirestring": "properti `{0}` adalah wajib dan harus bertipe `string`",
         "showViewlet": "Show {0}",
-        "view": "View",
+        "view": "Tampilkan",
         "ViewContainerRequiresProposedAPI": "View container '{0}' requires 'enableProposedApi' turned on to be added to 'Remote'.",
         "ViewContainerDoesnotExist": "Wadah tampilan '{0}' tidak ada dan semua tampilan yang terdaftar untuk itu akan ditambahkan ke 'Explorer'.",
         "duplicateView1": "Cannot register multiple views with same id `{0}` in the view container `{1}`",
@@ -1934,7 +1975,7 @@
         "zoomIn": "Zoom In",
         "zoomOut": "Zoom Out",
         "zoomReset": "Reset Zoom",
-        "restartWithExtensionsDisabled": "Restart With Extensions Disabled",
+        "reloadWindowWithExtensionsDisabled": "Reload With Extensions Disabled",
         "close": "Close Window",
         "switchWindowPlaceHolder": "Select a window to switch to",
         "current": "Current Window",
@@ -1947,13 +1988,15 @@
         "userIsSudo": "[Superuser]",
         "devExtensionWindowTitlePrefix": "[Extension Development Host]"
     },
-    "vs/workbench/browser/parts/statusbar/statusbarPart": {
-        "hide": "Sembunyikan",
-        "hideStatusBar": "Hide Status Bar"
-    },
     "vs/workbench/browser/parts/activitybar/activitybarPart": {
+        "hideMenu": "Hide Menu",
+        "showMenu": "Show Menu",
         "hideActivitBar": "Hide Activity Bar",
         "manage": "Manage"
+    },
+    "vs/workbench/browser/parts/statusbar/statusbarPart": {
+        "hide": "Hide '{0}'",
+        "hideStatusBar": "Hide Status Bar"
     },
     "vs/workbench/browser/workbench": {
         "loaderErrorNative": "Failed to load a required file. Please restart the application to try again. Details: {0}"
@@ -1972,15 +2015,6 @@
         "invalid.url.fileschema": "'configuration.jsonValidation.url' is an invalid relative URL: {0}",
         "invalid.url.schema": "'configuration.jsonValidation.url' must start with 'http:', 'https:' or './' to reference schemas located in the extension"
     },
-    "vs/workbench/api/browser/mainThreadExtensionService": {
-        "reload window": "Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not loaded. Would you like to reload the window to load the extension?",
-        "reload": "Reload Window",
-        "disabledDep": "Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is disabled. Would you like to enable the extension and reload the window?",
-        "enable dep": "Enable and Reload",
-        "uninstalledDep": "Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not installed. Would you like to install the extension and reload the window?",
-        "install missing dep": "Install and Reload",
-        "unknownDep": "Cannot activate the '{0}' extension because it depends on an unknown '{1}' extension ."
-    },
     "vs/workbench/api/browser/mainThreadMessageService": {
         "extensionSource": "{0} (Extension)",
         "defaultSource": "Extension",
@@ -1990,6 +2024,15 @@
     },
     "vs/workbench/api/browser/mainThreadProgress": {
         "manageExtension": "Manage Extension"
+    },
+    "vs/workbench/api/browser/mainThreadExtensionService": {
+        "reload window": "Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not loaded. Would you like to reload the window to load the extension?",
+        "reload": "Reload Window",
+        "disabledDep": "Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is disabled. Would you like to enable the extension and reload the window?",
+        "enable dep": "Enable and Reload",
+        "uninstalledDep": "Cannot activate the '{0}' extension because it depends on the '{1}' extension, which is not installed. Would you like to install the extension and reload the window?",
+        "install missing dep": "Install and Reload",
+        "unknownDep": "Cannot activate the '{0}' extension because it depends on an unknown '{1}' extension ."
     },
     "vs/workbench/browser/parts/quickopen/quickOpenController": {
         "quickOpenInput": "Type '?' to get help on the actions you can take from here",
@@ -2062,6 +2105,8 @@
         "activityBarForeground": "Activity bar item foreground color when it is active. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
         "activityBarInActiveForeground": "Activity bar item foreground color when it is inactive. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
         "activityBarBorder": "Activity bar border color separating to the side bar. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
+        "activityBarActiveBorder": "Activity bar border color for the active item. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
+        "activityBarActiveBackground": "Activity bar background color for the active item. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
         "activityBarDragAndDropBackground": "Drag and drop feedback color for the activity bar items. The color should have transparency so that the activity bar entries can still shine through. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
         "activityBarBadgeBackground": "Warna latar untuk lencana pemberitahuan aktivitas. Bilah aktivitas ditampilkan di paling kiri atau kanan dan dapat dialihkan sesuai dengan tampilan bilah sisi.",
         "activityBarBadgeForeground": "Activity notification badge foreground color. The activity bar is showing on the far left or right and allows to switch between views of the side bar.",
@@ -2120,18 +2165,22 @@
         "noResultsMatching": "No results matching",
         "noResultsFound2": "No results found"
     },
+    "vs/workbench/electron-browser/window": {
+        "runningAsRoot": "It is not recommended to run {0} as root user.",
+        "mPreferences": "Preferensi"
+    },
     "vs/workbench/api/node/extHostLogService": {
         "remote extension host Log": "Remote Extension Host",
         "extension host Log": "Extension Host"
-    },
-    "vs/workbench/api/browser/mainThreadWebview": {
-        "errorMessage": "An error occurred while restoring view:{0}"
     },
     "vs/workbench/api/browser/mainThreadSaveParticipant": {
         "timeout.formatOnSave": "Aborted format on save after {0}ms",
         "codeActionsOnSave.didTimeout": "Aborted codeActionsOnSave after {0}ms",
         "timeout.onWillSave": "Aborted onWillSaveTextDocument-event after 1750ms",
         "saveParticipants": "Running Save Participants..."
+    },
+    "vs/workbench/api/browser/mainThreadWebview": {
+        "errorMessage": "An error occurred while restoring view:{0}"
     },
     "vs/workbench/browser/parts/views/viewsViewlet": {
         "hideView": "Hide"
@@ -2143,22 +2192,8 @@
         "untitledFileEditorWithInputAriaLabel": "{0}. Untitled file text editor.",
         "untitledFileEditorAriaLabel": "Untitled file text editor."
     },
-    "vs/workbench/electron-browser/window": {
-        "undo": "Undo",
-        "redo": "Redo",
-        "cut": "Potong",
-        "copy": "Salin",
-        "paste": "Tempel",
-        "selectAll": "Select All",
-        "runningAsRoot": "It is not recommended to run {0} as root user.",
-        "mPreferences": "Preferensi"
-    },
     "vs/workbench/api/browser/mainThreadTask": {
         "task.label": "{0}: {1}"
-    },
-    "vs/workbench/browser/parts/compositePart": {
-        "ariaCompositeToolbarLabel": "{0} actions",
-        "titleTooltip": "{0} ({1})"
     },
     "vs/workbench/browser/parts/quickinput/quickInput": {
         "quickInput.back": "Back",
@@ -2172,6 +2207,10 @@
         "custom": "Custom",
         "quickInput.backWithKeybinding": "Back ({0})",
         "back": "Back"
+    },
+    "vs/workbench/browser/parts/compositePart": {
+        "ariaCompositeToolbarLabel": "{0} actions",
+        "titleTooltip": "{0} ({1})"
     },
     "vs/workbench/browser/parts/panel/panelActions": {
         "closePanel": "Close Panel",
@@ -2194,13 +2233,16 @@
     "vs/workbench/browser/parts/editor/editorWidgets": {
         "openWorkspace": "Buka Ruang Kerja"
     },
+    "vs/workbench/api/common/extHostWorkspace": {
+        "updateerror": "Extension '{0}' failed to update workspace folders: {1}"
+    },
     "vs/workbench/browser/parts/notifications/notificationsStatus": {
         "status.notifications": "Notifications",
         "hideNotifications": "Hide Notifications",
         "zeroNotifications": "No Notifications",
         "noNotifications": "No New Notifications",
         "oneNotification": "1 New Notification",
-        "notifications": "{0} New Notifications",
+        "notifications": "{0} Pemberitahuan Baru",
         "status.message": "Status Message"
     },
     "vs/workbench/browser/parts/notifications/notificationsAlerts": {
@@ -2208,8 +2250,23 @@
         "alertWarningMessage": "Peringatan: {0}",
         "alertInfoMessage": "Info: {0}"
     },
-    "vs/workbench/api/common/extHostWorkspace": {
-        "updateerror": "Extension '{0}' failed to update workspace folders: {1}"
+    "vs/workbench/browser/parts/notifications/notificationsCommands": {
+        "notifications": "Pemberitahuan",
+        "showNotifications": "Show Notifications",
+        "hideNotifications": "Hide Notifications",
+        "clearAllNotifications": "Clear All Notifications"
+    },
+    "vs/workbench/api/common/extHostExtensionService": {
+        "extensionTestError": "Path {0} does not point to a valid extension test runner."
+    },
+    "vs/workbench/browser/parts/notifications/notificationsCenter": {
+        "notificationsEmpty": "No new notifications",
+        "notifications": "Pemberitahuan",
+        "notificationsToolbar": "Notification Center Actions",
+        "notificationsList": "Notifications List"
+    },
+    "vs/workbench/browser/parts/compositeBar": {
+        "activityBarAriaLabel": "Active View Switcher"
     },
     "vs/workbench/browser/parts/compositeBarActions": {
         "badgeTitle": "{0} - {1}",
@@ -2230,34 +2287,11 @@
     "vs/workbench/browser/parts/views/panelViewlet": {
         "viewToolbarAriaLabel": "{0} actions"
     },
-    "vs/workbench/browser/parts/notifications/notificationsCenter": {
-        "notificationsEmpty": "No new notifications",
-        "notifications": "Pemberitahuan",
-        "notificationsToolbar": "Notification Center Actions",
-        "notificationsList": "Notifications List"
-    },
-    "vs/workbench/browser/parts/notifications/notificationsCommands": {
-        "notifications": "Notifications",
-        "showNotifications": "Show Notifications",
-        "hideNotifications": "Hide Notifications",
-        "clearAllNotifications": "Clear All Notifications"
-    },
-    "vs/workbench/api/common/extHostExtensionService": {
-        "extensionTestError": "Path {0} does not point to a valid extension test runner."
-    },
-    "vs/workbench/browser/parts/compositeBar": {
-        "activityBarAriaLabel": "Active View Switcher"
-    },
     "vs/workbench/browser/parts/notifications/notificationsToasts": {
         "notificationsToast": "Notification Toast"
     },
     "vs/workbench/browser/parts/editor/textEditor": {
         "editorLabelWithGroup": "{0}, {1}."
-    },
-    "vs/workbench/browser/parts/views/customView": {
-        "no-dataprovider": "There is no data provider registered that can provide view data.",
-        "collapseAll": "Collapse All",
-        "command-error": "Error running command {1}: {0}. This is likely caused by the extension that contributes {1}."
     },
     "vs/workbench/browser/parts/editor/binaryEditor": {
         "binaryEditor": "Binary Viewer"
@@ -2273,7 +2307,7 @@
         "mHelp": "&&Help",
         "menubar.customTitlebarAccessibilityNotification": "Accessibility support is enabled for you. For the most accessible experience, we recommend the custom title bar style.",
         "goToSetting": "Open Settings",
-        "checkForUpdates": "Check for &&Updates...",
+        "checkForUpdates": "Periksa &&Pembaruan...",
         "checkingForUpdates": "Memeriksa Pembaruan...",
         "download now": "D&&ownload Now",
         "DownloadingUpdate": "Mengunduh Pembaruan...",
@@ -2283,6 +2317,11 @@
     },
     "vs/workbench/api/node/extHostDebugService": {
         "debug.terminal.title": "debuggee"
+    },
+    "vs/workbench/browser/parts/views/customView": {
+        "no-dataprovider": "There is no data provider registered that can provide view data.",
+        "collapseAll": "Collapse All",
+        "command-error": "Error running command {1}: {0}. This is likely caused by the extension that contributes {1}."
     },
     "vs/workbench/browser/parts/editor/editorCommands": {
         "editorCommand.activeEditorMove.description": "Move the active editor by tabs or groups",
@@ -2319,6 +2358,9 @@
         "closeGroupAction": "Tutup",
         "emptyEditorGroup": "{0} (empty)",
         "groupLabel": "Group {0}",
+        "ok": "OK",
+        "cancel": "Batal",
+        "editorOpenErrorDialog": "Unable to open '{0}'",
         "editorOpenError": "Unable to open '{0}': {1}."
     },
     "vs/workbench/browser/parts/editor/editor.contribution": {
@@ -2346,8 +2388,8 @@
         "splitEditorDown": "Split Editor Down",
         "navigate.prev.label": "Perubahan sebelumnya",
         "navigate.next.label": "Next Change",
-        "ignoreTrimWhitespace.label": "Ignore Trim Whitespace",
-        "showTrimWhitespace.label": "Show Trim Whitespace",
+        "ignoreTrimWhitespace.label": "Ignore Leading/Trailing Whitespace Differences",
+        "showTrimWhitespace.label": "Show Leading/Trailing Whitespace Differences",
         "keepEditor": "Keep Editor",
         "closeEditorsInGroup": "Close All Editors in Group",
         "closeSavedEditors": "Close Saved Editors in Group",
@@ -2402,15 +2444,15 @@
     "vs/workbench/browser/parts/editor/binaryDiffEditor": {
         "metadataDiff": "{0} ↔ {1}"
     },
-    "vs/workbench/browser/parts/notifications/notificationsViewer": {
-        "notificationActions": "Notification Actions",
-        "notificationSource": "Source: {0}"
-    },
     "vs/workbench/api/common/extHostProgress": {
         "extensionSource": "{0} (Extension)"
     },
     "vs/workbench/api/common/extHostStatusBar": {
         "status.extensionMessage": "Extension Status"
+    },
+    "vs/workbench/browser/parts/notifications/notificationsViewer": {
+        "notificationActions": "Notification Actions",
+        "notificationSource": "Source: {0}"
     },
     "vs/workbench/browser/parts/editor/editorPicker": {
         "entryAriaLabel": "{0}, editor group picker",
@@ -2489,9 +2531,9 @@
         "editorLayoutTwoColumns": "Two Columns Editor Layout",
         "editorLayoutThreeColumns": "Three Columns Editor Layout",
         "editorLayoutTwoRows": "Two Rows Editor Layout",
-        "editorLayoutThreeRows": "Three Rows Editor Layout",
+        "editorLayoutThreeRows": "Tiga Baris Tata Letak Editor",
         "editorLayoutTwoByTwoGrid": "Grid Editor Layout (2x2)",
-        "editorLayoutTwoColumnsBottom": "Two Columns Bottom Editor Layout",
+        "editorLayoutTwoColumnsBottom": "Dua kolom Layout Editor bawah",
         "editorLayoutTwoRowsRight": "Two Rows Right Editor Layout",
         "newEditorLeft": "New Editor Group to the Left",
         "newEditorRight": "New Editor Group to the Right",
@@ -2530,7 +2572,7 @@
         "status.editor.selection": "Editor Selection",
         "selectIndentation": "Select Indentation",
         "status.editor.indentation": "Editor Indentation",
-        "selectEncoding": "Select Encoding",
+        "selectEncoding": "Pilih Encoding",
         "status.editor.encoding": "Editor Encoding",
         "selectEOL": "Select End of Line Sequence",
         "status.editor.eol": "Editor End of Line",
@@ -2583,7 +2625,33 @@
         "symbolSortOrder.position": "Show symbol outline in file position order.",
         "symbolSortOrder.name": "Show symbol outline in alphabetical order.",
         "symbolSortOrder.type": "Show symbol outline in symbol type order.",
-        "icons": "Render breadcrumb items with icons."
+        "icons": "Render breadcrumb items with icons.",
+        "filteredTypes.file": "When set to `false` breadcrumbs never show `file`-symbols.",
+        "filteredTypes.module": "When set to `false` breadcrumbs never show `module`-symbols.",
+        "filteredTypes.namespace": "When set to `false` breadcrumbs never show `namespace`-symbols.",
+        "filteredTypes.package": "When set to `false` breadcrumbs never show `package`-symbols.",
+        "filteredTypes.class": "When set to `false` breadcrumbs never show `class`-symbols.",
+        "filteredTypes.method": "When set to `false` breadcrumbs never show `method`-symbols.",
+        "filteredTypes.property": "When set to `false` breadcrumbs never show `property`-symbols.",
+        "filteredTypes.field": "When set to `false` breadcrumbs never show `field`-symbols.",
+        "filteredTypes.constructor": "When set to `false` breadcrumbs never show `constructor`-symbols.",
+        "filteredTypes.enum": "When set to `false` breadcrumbs never show `enum`-symbols.",
+        "filteredTypes.interface": "When set to `false` breadcrumbs never show `interface`-symbols.",
+        "filteredTypes.function": "When set to `false` breadcrumbs never show `function`-symbols.",
+        "filteredTypes.variable": "When set to `false` breadcrumbs never show `variable`-symbols.",
+        "filteredTypes.constant": "When set to `false` breadcrumbs never show `constant`-symbols.",
+        "filteredTypes.string": "When set to `false` breadcrumbs never show `string`-symbols.",
+        "filteredTypes.number": "When set to `false` breadcrumbs never show `number`-symbols.",
+        "filteredTypes.boolean": "When set to `false` breadcrumbs never show `boolean`-symbols.",
+        "filteredTypes.array": "When set to `false` breadcrumbs never show `array`-symbols.",
+        "filteredTypes.object": "When set to `false` breadcrumbs never show `object`-symbols.",
+        "filteredTypes.key": "When set to `false` breadcrumbs never show `key`-symbols.",
+        "filteredTypes.null": "When set to `false` breadcrumbs never show `null`-symbols.",
+        "filteredTypes.enumMember": "When set to `false` breadcrumbs never show `enumMember`-symbols.",
+        "filteredTypes.struct": "When set to `false` breadcrumbs never show `struct`-symbols.",
+        "filteredTypes.event": "When set to `false` breadcrumbs never show `event`-symbols.",
+        "filteredTypes.operator": "When set to `false` breadcrumbs never show `operator`-symbols.",
+        "filteredTypes.typeParameter": "When set to `false` breadcrumbs never show `typeParameter`-symbols."
     },
     "vs/workbench/browser/parts/editor/breadcrumbsControl": {
         "cmd.toggle": "Toggle Breadcrumbs",
@@ -2620,15 +2688,30 @@
         "cantUninstall": "Unable to uninstall the shell command '{0}'.",
         "shellCommand": "Perintah Shell"
     },
+    "vs/workbench/contrib/codeEditor/browser/largeFileOptimizations": {
+        "largeFile": "{0}: tokenization, wrapping and folding have been turned off for this large file in order to reduce memory usage and avoid freezing or crashing.",
+        "removeOptimizations": "Forcefully enable features",
+        "reopenFilePrompt": "Please reopen file in order for this setting to take effect."
+    },
+    "vs/workbench/contrib/codeEditor/browser/diffEditorHelper": {
+        "hintTimeout": "The diff algorithm was stopped early (after {0} ms.)",
+        "removeTimeout": "Remove limit",
+        "hintWhitespace": "Show Whitespace Differences"
+    },
     "vs/workbench/contrib/codeEditor/browser/inspectKeybindings": {
         "workbench.action.inspectKeyMap": "Developer: Inspect Key Mappings",
         "workbench.action.inspectKeyMapJSON": "Inspect Key Mappings (JSON)",
         "developer": "Developer"
     },
-    "vs/workbench/contrib/codeEditor/browser/largeFileOptimizations": {
-        "largeFile": "{0}: tokenization, wrapping and folding have been turned off for this large file in order to reduce memory usage and avoid freezing or crashing.",
-        "removeOptimizations": "Forcefully enable features",
-        "reopenFilePrompt": "Please reopen file in order for this setting to take effect."
+    "vs/workbench/contrib/codeEditor/browser/toggleMinimap": {
+        "toggleMinimap": "Alihkan Minimap",
+        "view": "Tampilan",
+        "miShowMinimap": "Show &&Minimap"
+    },
+    "vs/workbench/contrib/codeEditor/browser/toggleRenderControlCharacter": {
+        "toggleRenderControlCharacters": "Toggle Control Characters",
+        "view": "Tampilkan",
+        "miToggleRenderControlCharacters": "Render &&Control Characters"
     },
     "vs/workbench/contrib/codeEditor/browser/toggleMultiCursorModifier": {
         "toggleLocation": "Toggle Multi-Cursor Modifier",
@@ -2636,24 +2719,21 @@
         "miMultiCursorCmd": "Switch to Cmd+Click for Multi-Cursor",
         "miMultiCursorCtrl": "Switch to Ctrl+Click for Multi-Cursor"
     },
-    "vs/workbench/contrib/codeEditor/browser/toggleMinimap": {
-        "toggleMinimap": "Alihkan Minimap",
-        "view": "View",
-        "miShowMinimap": "Show &&Minimap"
-    },
     "vs/workbench/contrib/codeEditor/browser/toggleRenderWhitespace": {
         "toggleRenderWhitespace": "Toggle Render Whitespace",
-        "view": "Tampilkan",
-        "miToggleRenderWhitespace": "&&Render Whitespace"
-    },
-    "vs/workbench/contrib/codeEditor/browser/toggleRenderControlCharacter": {
-        "toggleRenderControlCharacters": "Toggle Control Characters",
         "view": "View",
-        "miToggleRenderControlCharacters": "Render &&Control Characters"
+        "miToggleRenderWhitespace": "&&Render Whitespace"
     },
     "vs/workbench/contrib/codeEditor/browser/inspectTMScopes/inspectTMScopes": {
         "inspectTMScopes": "Developer: Inspect TM Scopes",
         "inspectTMScopesWidget.loading": "Memuat..."
+    },
+    "vs/workbench/contrib/codeEditor/browser/toggleWordWrap": {
+        "toggle.wordwrap": "View: Toggle Word Wrap",
+        "wordWrap.notInDiffEditor": "Cannot toggle word wrap in a diff editor.",
+        "unwrapMinified": "Disable wrapping for this file",
+        "wrapMinified": "Enable wrapping for this file",
+        "miToggleWordWrap": "Toggle &&Word Wrap"
     },
     "vs/workbench/contrib/codeEditor/browser/accessibility/accessibility": {
         "emergencyConfOn": "Now changing the setting `editor.accessibilitySupport` to 'on'.",
@@ -2675,13 +2755,6 @@
         "openDocWinLinux": "Press Control+H now to open a browser window with more VS Code information related to Accessibility.",
         "outroMsg": "You can dismiss this tooltip and return to the editor by pressing Escape or Shift+Escape.",
         "ShowAccessibilityHelpAction": "Show Accessibility Help"
-    },
-    "vs/workbench/contrib/codeEditor/browser/toggleWordWrap": {
-        "toggle.wordwrap": "View: Toggle Word Wrap",
-        "wordWrap.notInDiffEditor": "Cannot toggle word wrap in a diff editor.",
-        "unwrapMinified": "Disable wrapping for this file",
-        "wrapMinified": "Enable wrapping for this file",
-        "miToggleWordWrap": "Toggle &&Word Wrap"
     },
     "vs/workbench/contrib/codeEditor/browser/languageConfigurationExtensionPoint": {
         "parseErrors": "Kesalahan dalam mengurai {0}: {1}",
@@ -2739,12 +2812,12 @@
         "pickCommentService": "Select Comment Provider",
         "nextCommentThreadAction": "Go to Next Comment Thread"
     },
+    "vs/workbench/contrib/comments/browser/commentsPanel": {
+        "collapseAll": "Collapse All"
+    },
     "vs/workbench/contrib/comments/browser/commentsTreeViewer": {
         "imageWithLabel": "Image: {0}",
         "image": "Image"
-    },
-    "vs/workbench/contrib/comments/browser/commentsPanel": {
-        "collapseAll": "Collapse All"
     },
     "vs/workbench/contrib/comments/browser/commentGlyphWidget": {
         "editorGutterCommentRangeForeground": "Editor gutter decoration color for commenting ranges."
@@ -2775,28 +2848,29 @@
         "workbenchConfigurationTitle": "Meja kerja",
         "editor.editorAssociations": "Configure which editor to use for a resource.",
         "editor.editorAssociations.viewType": "Editor view type.",
-        "editor.editorAssociations.scheme": "Uri scheme the editor should be used for.",
+        "editor.editorAssociations.mime": "Mime type the editor should be used for. This is used for binary files.",
         "editor.editorAssociations.filenamePattern": "Glob pattern the the editor should be used for."
     },
     "vs/workbench/contrib/customEditor/browser/commands": {
         "viewCategory": "Tampilkan",
-        "openWith.title": "Open With",
         "reopenWith.title": "Reopen With"
     },
     "vs/workbench/contrib/customEditor/browser/customEditors": {
-        "promptOpenWith.defaultEditor": "Default built-in editor",
+        "promptOpenWith.defaultEditor": "VS Code's standard text editor",
+        "openWithCurrentlyActive": "Currently Active",
         "promptOpenWith.placeHolder": "Select editor to use for '{0}'..."
     },
     "vs/workbench/contrib/customEditor/browser/extensionPoint": {
         "contributes.webviewEditors": "Contributes webview editors.",
         "contributes.viewType": "Unique identifier of the custom editor.",
-        "contributes.displayName": "Name of the custom editor displayed to users.",
+        "contributes.displayName": "Human readable name of the custom editor. This is displayed to users when selecting which editor to use.",
         "contributes.selector": "Set of globs that the custom editor is enabled for.",
         "contributes.selector.filenamePattern": "Glob that the custom editor is enabled for.",
-        "contributes.selector.scheme": "File scheme that the custom editor is enabled for.",
-        "contributes.discretion": "Controls when the custom editor is used. May be overridden by users.",
-        "contributes.discretion.default": "Editor is automatically used for a resource if no other default custom editors are registered for it.",
-        "contributes.discretion.option": "Editor is not automatically used but can be selected by a user."
+        "contributes.selector.mime": "Glob that matches the mime type of a data uri resource.",
+        "contributes.priority": "Controls when the custom editor is used. May be overridden by users.",
+        "contributes.priority.default": "Editor is automatically used for a resource if no other default custom editors are registered for it.",
+        "contributes.priority.option": "Editor is not automatically used but can be selected by a user.",
+        "contributes.priority.builtin": "Editor automatically used if no other `default` or `builtin` editors are registered for the resource."
     },
     "vs/workbench/contrib/debug/common/debug": {
         "internalConsoleOptions": "Controls when the internal debug console should open."
@@ -2882,7 +2956,11 @@
         "debug.console.wordWrap": "Controls if the lines should wrap in the debug console.",
         "launch": "Global debug launch configuration. Should be used as an alternative to 'launch.json' that is shared across workspaces.",
         "debug.focusWindowOnBreak": "Controls whether the workbench window should be focused when the debugger breaks.",
+        "debugAnyway": "Ignore task errors and start debugging.",
+        "showErrors": "Show the Problems view and do not start debugging.",
+        "prompt": "Prompt user.",
         "debug.onTaskErrors": "Controls what to do when errors are encountered after running a preLaunchTask.",
+        "showBreakpointsInOverviewRuler": "Controls whether breakpoints should be shown in the overview ruler.",
         "stepBackDebug": "Step Back",
         "reverseContinue": "Reverse",
         "restartFrame": "Restart Frame",
@@ -2928,6 +3006,17 @@
         "clearRepl": "Clear Console",
         "debugConsoleCleared": "Debug console was cleared"
     },
+    "vs/workbench/contrib/debug/browser/debugToolBar": {
+        "debugToolBarBackground": "Debug toolbar background color.",
+        "debugToolBarBorder": "Debug toolbar border color."
+    },
+    "vs/workbench/contrib/debug/browser/debugActionViewItems": {
+        "debugLaunchConfigurations": "Debug Launch Configurations",
+        "noConfigurations": "No Configurations",
+        "addConfigTo": "Add Config ({0})...",
+        "addConfiguration": "Add Configuration...",
+        "debugSession": "Debug Session"
+    },
     "vs/workbench/contrib/debug/browser/debugActions": {
         "openLaunchJson": "Open {0}",
         "launchJsonNeedsConfigurtion": "Configure or Fix 'launch.json'",
@@ -2948,27 +3037,11 @@
         "focusSession": "Focus Session",
         "copyValue": "Copy Value"
     },
-    "vs/workbench/contrib/debug/browser/debugToolBar": {
-        "debugToolBarBackground": "Debug toolbar background color.",
-        "debugToolBarBorder": "Debug toolbar border color."
-    },
-    "vs/workbench/contrib/debug/browser/debugActionViewItems": {
-        "debugLaunchConfigurations": "Debug Launch Configurations",
-        "noConfigurations": "No Configurations",
-        "addConfigTo": "Add Config ({0})...",
-        "addConfiguration": "Add Configuration...",
-        "debugSession": "Debug Session"
-    },
     "vs/workbench/contrib/debug/browser/exceptionWidget": {
         "debugExceptionWidgetBorder": "Exception widget border color.",
         "debugExceptionWidgetBackground": "Exception widget background color.",
         "exceptionThrownWithId": "Exception has occurred: {0}",
         "exceptionThrown": "Exception has occurred."
-    },
-    "vs/workbench/contrib/debug/common/debugContentProvider": {
-        "unable": "Unable to resolve the resource without a debug session",
-        "canNotResolveSourceWithError": "Could not load source '{0}': {1}.",
-        "canNotResolveSource": "Could not load source '{0}'."
     },
     "vs/workbench/contrib/debug/browser/statusbarColorProvider": {
         "statusBarDebuggingBackground": "Status bar background color when a program is being debugged. The status bar is shown in the bottom of the window",
@@ -2982,6 +3055,11 @@
     "vs/workbench/contrib/debug/browser/debugHover": {
         "treeAriaLabel": "Debug Hover",
         "variableAriaLabel": "{0} value {1}, variables, debug"
+    },
+    "vs/workbench/contrib/debug/common/debugContentProvider": {
+        "unable": "Unable to resolve the resource without a debug session",
+        "canNotResolveSourceWithError": "Could not load source '{0}': {1}.",
+        "canNotResolveSource": "Could not load source '{0}'."
     },
     "vs/workbench/contrib/debug/browser/debugEditorActions": {
         "toggleBreakpointAction": "Debug: Toggle Breakpoint",
@@ -2997,6 +3075,15 @@
     "vs/workbench/contrib/debug/browser/debugCallStackContribution": {
         "topStackFrameLineHighlight": "Background color for the highlight of line at the top stack frame position.",
         "focusedStackFrameLineHighlight": "Background color for the highlight of line at focused stack frame position."
+    },
+    "vs/workbench/contrib/debug/browser/breakpointWidget": {
+        "breakpointWidgetLogMessagePlaceholder": "Message to log when breakpoint is hit. Expressions within {} are interpolated. 'Enter' to accept, 'esc' to cancel.",
+        "breakpointWidgetHitCountPlaceholder": "Break when hit count condition is met. 'Enter' to accept, 'esc' to cancel.",
+        "breakpointWidgetExpressionPlaceholder": "Break when expression evaluates to true. 'Enter' to accept, 'esc' to cancel.",
+        "expression": "Expression",
+        "hitCount": "Hit Count",
+        "logMessage": "Log Message",
+        "breakpointType": "Breakpoint Type"
     },
     "vs/workbench/contrib/debug/browser/watchExpressionsView": {
         "watchExpressionsSection": "Watch Expressions Section",
@@ -3019,15 +3106,6 @@
         "variableScopeAriaLabel": "Scope {0}, variables, debug",
         "variableAriaLabel": "{0} value {1}, variables, debug"
     },
-    "vs/workbench/contrib/debug/browser/breakpointWidget": {
-        "breakpointWidgetLogMessagePlaceholder": "Message to log when breakpoint is hit. Expressions within {} are interpolated. 'Enter' to accept, 'esc' to cancel.",
-        "breakpointWidgetHitCountPlaceholder": "Break when hit count condition is met. 'Enter' to accept, 'esc' to cancel.",
-        "breakpointWidgetExpressionPlaceholder": "Break when expression evaluates to true. 'Enter' to accept, 'esc' to cancel.",
-        "expression": "Expression",
-        "hitCount": "Hit Count",
-        "logMessage": "Log Message",
-        "breakpointType": "Breakpoint Type"
-    },
     "vs/workbench/contrib/debug/browser/loadedScriptsView": {
         "loadedScriptsSection": "Loaded Scripts Section",
         "loadedScriptsAriaLabel": "Debug Loaded Scripts",
@@ -3044,22 +3122,6 @@
     "vs/workbench/contrib/debug/common/replModel": {
         "consoleCleared": "Console was cleared",
         "snapshotObj": "Only primitive values are shown for this object."
-    },
-    "vs/workbench/contrib/debug/browser/debugCommands": {
-        "restartDebug": "Restart",
-        "stepOverDebug": "Step Over",
-        "stepIntoDebug": "Step Into",
-        "stepOutDebug": "Step Out",
-        "pauseDebug": "Pause",
-        "disconnect": "Disconnect",
-        "stop": "Stop",
-        "continueDebug": "Continue",
-        "chooseLocation": "Choose the specific location",
-        "noExecutableCode": "Tidak ada kode yang dapat dieksekusi pada posisi kursor saat ini.",
-        "jumpToCursor": "Jump to Cursor",
-        "debug": "Debug",
-        "noFolderDebugConfig": "Please first open a folder in order to do advanced debug configuration.",
-        "addInlineBreakpoint": "Add Inline Breakpoint"
     },
     "vs/workbench/contrib/debug/browser/breakpointsView": {
         "breakpointsSection": "Breakpoints Section",
@@ -3079,16 +3141,27 @@
         "functionBreakpoint": "Function Breakpoint",
         "dataBreakpointUnsupported": "Data breakpoints not supported by this debug type",
         "dataBreakpoint": "Data Breakpoint",
-        "logBreakpointUnsupported": "Logpoints not supported by this debug type",
+        "breakpointUnsupported": "Breakpoints of this type are not supported by the debugger",
         "logMessage": "Log Message: {0}",
-        "conditionalBreakpointUnsupported": "Conditional breakpoints not supported by this debug type",
-        "hitBreakpointUnsupported": "Hit conditional breakpoints not supported by this debug type",
         "expression": "Expression: {0}",
         "hitCount": "Hit Count: {0}",
         "breakpoint": "Breakpoint"
     },
-    "vs/workbench/contrib/debug/common/debugSource": {
-        "unknownSource": "Sumber Tidak Diketahui"
+    "vs/workbench/contrib/debug/browser/debugCommands": {
+        "restartDebug": "Restart",
+        "stepOverDebug": "Step Over",
+        "stepIntoDebug": "Step Into",
+        "stepOutDebug": "Step Out",
+        "pauseDebug": "Pause",
+        "disconnect": "Disconnect",
+        "stop": "Stop",
+        "continueDebug": "Continue",
+        "chooseLocation": "Choose the specific location",
+        "noExecutableCode": "Tidak ada kode yang dapat dieksekusi pada posisi kursor saat ini.",
+        "jumpToCursor": "Jump to Cursor",
+        "debug": "Debug",
+        "noFolderDebugConfig": "Please first open a folder in order to do advanced debug configuration.",
+        "addInlineBreakpoint": "Add Inline Breakpoint"
     },
     "vs/workbench/contrib/debug/browser/callStackView": {
         "callstackSection": "Call Stack Section",
@@ -3105,6 +3178,9 @@
         "threadAriaLabel": "Thread {0}, callstack, debug",
         "stackFrameAriaLabel": "Stack Frame {0} line {1} {2}, callstack, debug",
         "sessionLabel": "Debug Session {0}"
+    },
+    "vs/workbench/contrib/debug/common/debugSource": {
+        "unknownSource": "Sumber Tidak Diketahui"
     },
     "vs/workbench/contrib/debug/common/debugModel": {
         "startDebugFirst": "Please start a debug session to evaluate expressions",
@@ -3162,6 +3238,23 @@
         "debuggingStarted": "Debugging started.",
         "debuggingStopped": "Debugging stopped."
     },
+    "vs/workbench/contrib/debug/common/debugger": {
+        "cannot.find.da": "Cannot find debug adapter for type '{0}'.",
+        "launch.config.comment1": "Gunakan IntelliSense untuk mempelajari atribut yang memungkinkan.",
+        "launch.config.comment2": "Hover to view descriptions of existing attributes.",
+        "launch.config.comment3": "For more information, visit: {0}",
+        "debugType": "Type of configuration.",
+        "debugTypeNotRecognised": "The debug type is not recognized. Make sure that you have a corresponding debug extension installed and that it is enabled.",
+        "node2NotSupported": "\"node2\" is no longer supported, use \"node\" instead and set the \"protocol\" attribute to \"inspector\".",
+        "debugName": "Name of configuration; appears in the launch configuration drop down menu.",
+        "debugRequest": "Request type of configuration. Can be \"launch\" or \"attach\".",
+        "debugServer": "For debug extension development only: if a port is specified VS Code tries to connect to a debug adapter running in server mode",
+        "debugPrelaunchTask": "Task to run before debug session starts.",
+        "debugPostDebugTask": "Task to run after debug session ends.",
+        "debugWindowsConfiguration": "Windows specific launch configuration attributes.",
+        "debugOSXConfiguration": "OS X specific launch configuration attributes.",
+        "debugLinuxConfiguration": "Linux specific launch configuration attributes."
+    },
     "vs/workbench/contrib/debug/common/debugSchemas": {
         "vscode.extension.contributes.debuggers": "Contributes debug adapters.",
         "vscode.extension.contributes.debuggers.type": "Unique identifier for this debug adapter.",
@@ -3193,23 +3286,6 @@
         "app.launch.json.compound.folder": "Name of folder in which the compound is located.",
         "app.launch.json.compounds.configurations": "Names of configurations that will be started as part of this compound."
     },
-    "vs/workbench/contrib/debug/common/debugger": {
-        "cannot.find.da": "Cannot find debug adapter for type '{0}'.",
-        "launch.config.comment1": "Gunakan IntelliSense untuk mempelajari atribut yang memungkinkan.",
-        "launch.config.comment2": "Hover to view descriptions of existing attributes.",
-        "launch.config.comment3": "For more information, visit: {0}",
-        "debugType": "Type of configuration.",
-        "debugTypeNotRecognised": "The debug type is not recognized. Make sure that you have a corresponding debug extension installed and that it is enabled.",
-        "node2NotSupported": "\"node2\" is no longer supported, use \"node\" instead and set the \"protocol\" attribute to \"inspector\".",
-        "debugName": "Name of configuration; appears in the launch configuration drop down menu.",
-        "debugRequest": "Request type of configuration. Can be \"launch\" or \"attach\".",
-        "debugServer": "For debug extension development only: if a port is specified VS Code tries to connect to a debug adapter running in server mode",
-        "debugPrelaunchTask": "Task to run before debug session starts.",
-        "debugPostDebugTask": "Task to run after debug session ends.",
-        "debugWindowsConfiguration": "Windows specific launch configuration attributes.",
-        "debugOSXConfiguration": "OS X specific launch configuration attributes.",
-        "debugLinuxConfiguration": "Linux specific launch configuration attributes."
-    },
     "vs/workbench/contrib/debug/browser/rawDebugSession": {
         "moreInfo": "More Info"
     },
@@ -3228,10 +3304,10 @@
         "searchFor": "Press Enter to search for '{0}' in the Marketplace.",
         "noExtensionsToInstall": "Type an extension name"
     },
+    "vs/workbench/contrib/extensions/electron-browser/runtimeExtensionsInput": {},
     "vs/workbench/contrib/extensions/electron-browser/extensionsActions": {
         "openExtensionsFolder": "Open Extensions Folder"
     },
-    "vs/workbench/contrib/extensions/electron-browser/runtimeExtensionsInput": {},
     "vs/workbench/contrib/extensions/electron-browser/extensionProfileService": {
         "profilingExtensionHost": "$(sync~spin) Profiling Extension Host",
         "selectAndStartDebug": "Click to stop profiling.",
@@ -3306,14 +3382,14 @@
         "reloadNow": "Reload Now"
     },
     "vs/workbench/contrib/extensions/common/extensionsInput": {},
-    "vs/workbench/contrib/extensions/browser/extensionsActivationProgress": {
-        "activation": "Activating Extensions..."
-    },
     "vs/workbench/contrib/extensions/common/extensionsUtils": {
         "disableOtherKeymapsConfirmation": "Disable other keymaps ({0}) to avoid conflicts between keybindings?",
         "yes": "Ya"
     },
     "vs/workbench/contrib/extensions/browser/extensionsDependencyChecker": {},
+    "vs/workbench/contrib/extensions/browser/extensionsActivationProgress": {
+        "activation": "Activating Extensions..."
+    },
     "vs/workbench/contrib/extensions/browser/remoteExtensionsInstaller": {},
     "vs/workbench/contrib/extensions/common/extensionsFileTemplate": {
         "app.extensions.json.title": "Ekstensi",
@@ -3584,7 +3660,7 @@
         "terminal.external.linuxExec": "Customizes which terminal to run on Linux."
     },
     "vs/workbench/contrib/externalTerminal/browser/externalTerminal.contribution": {
-        "globalConsoleAction": "Open New Terminal",
+        "globalConsoleAction": "Open New External Terminal",
         "scopedConsoleAction": "Open in Terminal"
     },
     "vs/workbench/contrib/feedback/browser/feedbackStatusbarItem": {
@@ -3746,59 +3822,6 @@
         "fileEditorWithInputAriaLabel": "{0}. Text file editor.",
         "fileEditorAriaLabel": "Text file editor."
     },
-    "vs/workbench/contrib/files/browser/views/emptyView": {
-        "noWorkspace": "Tidak ada folder terbuka",
-        "explorerSection": "Bagian File Explorer",
-        "noWorkspaceHelp": "You have not yet added a folder to the workspace.",
-        "addFolder": "Add Folder",
-        "remoteNoFolderHelp": "Connected to {0}",
-        "connecting": "Connecting...",
-        "noFolderHelp": "You have not yet opened a folder.",
-        "openFolder": "Open Folder"
-    },
-    "vs/workbench/contrib/files/browser/editors/binaryFileEditor": {
-        "binaryFileEditor": "Binary File Viewer"
-    },
-    "vs/workbench/contrib/files/browser/views/explorerView": {
-        "explorerSection": "Bagian File Explorer",
-        "treeAriaLabel": "Files Explorer"
-    },
-    "vs/workbench/contrib/files/browser/saveErrorHandler": {
-        "userGuide": "Use the actions in the editor tool bar to either undo your changes or overwrite the content of the file with your changes.",
-        "staleSaveError": "Failed to save '{0}': The content of the file is newer. Please compare your version with the file contents.",
-        "retry": "Retry",
-        "discard": "Discard",
-        "readonlySaveErrorAdmin": "Failed to save '{0}': File is read-only. Select 'Overwrite as Admin' to retry as administrator.",
-        "readonlySaveErrorSudo": "Failed to save '{0}': File is read-only. Select 'Overwrite as Sudo' to retry as superuser.",
-        "readonlySaveError": "Failed to save '{0}': File is read-only. Select 'Overwrite' to attempt to make it writeable.",
-        "permissionDeniedSaveError": "Failed to save '{0}': Insufficient permissions. Select 'Retry as Admin' to retry as administrator.",
-        "permissionDeniedSaveErrorSudo": "Failed to save '{0}': Insufficient permissions. Select 'Retry as Sudo' to retry as superuser.",
-        "genericSaveError": "Failed to save '{0}': {1}",
-        "learnMore": "Learn More",
-        "dontShowAgain": "Jangan Tampilkan Lagi",
-        "compareChanges": "Compare",
-        "saveConflictDiffLabel": "{0} (in file) ↔ {1} (in {2}) - Resolve save conflict",
-        "overwriteElevated": "Overwrite as Admin...",
-        "overwriteElevatedSudo": "Overwrite as Sudo...",
-        "saveElevated": "Retry as Admin...",
-        "saveElevatedSudo": "Retry as Sudo...",
-        "overwrite": "Overwrite"
-    },
-    "vs/workbench/contrib/files/browser/views/openEditorsView": {
-        "openEditors": "Open Editors",
-        "openEditosrSection": "Open Editors Section",
-        "dirtyCounter": "{0} unsaved"
-    },
-    "vs/workbench/contrib/files/browser/fileCommands": {
-        "saveAs": "Save As...",
-        "save": "Save",
-        "saveWithoutFormatting": "Save without Formatting",
-        "saveAll": "Save All",
-        "removeFolderFromWorkspace": "Remove Folder from Workspace",
-        "genericRevertError": "Failed to revert '{0}': {1}",
-        "modifiedLabel": "{0} (in file) ↔ {1}",
-        "openFileToCopy": "Open a file first to copy its path"
-    },
     "vs/workbench/contrib/files/browser/fileActions": {
         "newFile": "New File",
         "newFolder": "Folder Baru",
@@ -3857,6 +3880,65 @@
         "retry": "Retry",
         "fileIsAncestor": "File to paste is an ancestor of the destination folder",
         "fileDeleted": "File to paste was deleted or moved meanwhile. {0}"
+    },
+    "vs/workbench/contrib/files/common/workspaceWatcher": {
+        "netVersionError": "The Microsoft .NET Framework 4.5 is required. Please follow the link to install it.",
+        "installNet": "Unduh .NET Framework 4.5",
+        "enospcError": "Unable to watch for file changes in this large workspace. Please follow the instructions link to resolve this issue.",
+        "learnMore": "Instructions"
+    },
+    "vs/workbench/contrib/files/browser/editors/binaryFileEditor": {
+        "binaryFileEditor": "Binary File Viewer"
+    },
+    "vs/workbench/contrib/files/browser/views/emptyView": {
+        "noWorkspace": "Tidak ada folder terbuka",
+        "explorerSection": "Bagian File Explorer",
+        "noWorkspaceHelp": "You have not yet added a folder to the workspace.",
+        "addFolder": "Add Folder",
+        "remoteNoFolderHelp": "Connected to {0}",
+        "connecting": "Connecting...",
+        "noFolderHelp": "You have not yet opened a folder.",
+        "openFolder": "Open Folder"
+    },
+    "vs/workbench/contrib/files/browser/saveErrorHandler": {
+        "userGuide": "Use the actions in the editor tool bar to either undo your changes or overwrite the content of the file with your changes.",
+        "staleSaveError": "Failed to save '{0}': The content of the file is newer. Please compare your version with the file contents.",
+        "retry": "Retry",
+        "discard": "Discard",
+        "readonlySaveErrorAdmin": "Failed to save '{0}': File is read-only. Select 'Overwrite as Admin' to retry as administrator.",
+        "readonlySaveErrorSudo": "Failed to save '{0}': File is read-only. Select 'Overwrite as Sudo' to retry as superuser.",
+        "readonlySaveError": "Failed to save '{0}': File is read-only. Select 'Overwrite' to attempt to make it writeable.",
+        "permissionDeniedSaveError": "Failed to save '{0}': Insufficient permissions. Select 'Retry as Admin' to retry as administrator.",
+        "permissionDeniedSaveErrorSudo": "Failed to save '{0}': Insufficient permissions. Select 'Retry as Sudo' to retry as superuser.",
+        "genericSaveError": "Failed to save '{0}': {1}",
+        "learnMore": "Learn More",
+        "dontShowAgain": "Jangan Tampilkan Lagi",
+        "compareChanges": "Compare",
+        "saveConflictDiffLabel": "{0} (in file) ↔ {1} (in {2}) - Resolve save conflict",
+        "overwriteElevated": "Overwrite as Admin...",
+        "overwriteElevatedSudo": "Overwrite as Sudo...",
+        "saveElevated": "Retry as Admin...",
+        "saveElevatedSudo": "Retry as Sudo...",
+        "overwrite": "Overwrite"
+    },
+    "vs/workbench/contrib/files/browser/views/openEditorsView": {
+        "openEditors": "Open Editors",
+        "openEditosrSection": "Open Editors Section",
+        "dirtyCounter": "{0} unsaved"
+    },
+    "vs/workbench/contrib/files/browser/views/explorerView": {
+        "explorerSection": "Bagian File Explorer",
+        "treeAriaLabel": "Files Explorer"
+    },
+    "vs/workbench/contrib/files/browser/fileCommands": {
+        "saveAs": "Save As...",
+        "save": "Save",
+        "saveWithoutFormatting": "Save without Formatting",
+        "saveAll": "Save All",
+        "removeFolderFromWorkspace": "Remove Folder from Workspace",
+        "genericRevertError": "Failed to revert '{0}': {1}",
+        "modifiedLabel": "{0} (in file) ↔ {1}",
+        "openFileToCopy": "Open a file first to copy its path"
     },
     "vs/workbench/contrib/files/browser/views/explorerDecorationsProvider": {
         "label": "Explorer",
@@ -3919,7 +4001,6 @@
         "yes": "Ya",
         "restart now": "Restart Now",
         "neverAgain": "Jangan Tampilkan Lagi",
-        "JsonSchema.locale": "The UI Language to use.",
         "vscode.extension.contributes.localizations": "Contributes localizations to the editor",
         "vscode.extension.contributes.localizations.languageId": "Id of the language into which the display strings are translated.",
         "vscode.extension.contributes.localizations.languageName": "Name of the language in English.",
@@ -3929,12 +4010,6 @@
         "vscode.extension.contributes.localizations.translations.id.pattern": "Id should be `vscode` or in format `publisherId.extensionName` for translating VS code or an extension respectively.",
         "vscode.extension.contributes.localizations.translations.path": "A relative path to a file containing translations for the language."
     },
-    "vs/workbench/contrib/localizations/browser/minimalTranslations": {
-        "showLanguagePackExtensions": "Search language packs in the Marketplace to change the display language to {0}.",
-        "searchMarketplace": "Search Marketplace",
-        "installAndRestartMessage": "Install language pack to change the display language to {0}.",
-        "installAndRestart": "Install and Restart"
-    },
     "vs/workbench/contrib/localizations/browser/localizationsActions": {
         "configureLocale": "Configure Display Language",
         "installAdditionalLanguages": "Install additional languages...",
@@ -3942,6 +4017,12 @@
         "relaunchDisplayLanguageMessage": "A restart is required for the change in display language to take effect.",
         "relaunchDisplayLanguageDetail": "Press the restart button to restart {0} and change the display language.",
         "restart": "&&Restart"
+    },
+    "vs/workbench/contrib/localizations/browser/minimalTranslations": {
+        "showLanguagePackExtensions": "Search language packs in the Marketplace to change the display language to {0}.",
+        "searchMarketplace": "Search Marketplace",
+        "installAndRestartMessage": "Install language pack to change the display language to {0}.",
+        "installAndRestart": "Install and Restart"
     },
     "vs/workbench/contrib/logs/electron-browser/logs.contribution": {
         "developer": "Developer"
@@ -3951,6 +4032,7 @@
     },
     "vs/workbench/contrib/logs/common/logs.contribution": {
         "developer": "Developer",
+        "userDataSyncLog": "Configuration Sync",
         "rendererLog": "Window",
         "mainLog": "Main",
         "sharedLog": "Shared",
@@ -3986,15 +4068,6 @@
         "totalInfos": "{0} Infos",
         "noProblems": "No Problems",
         "manyProblems": "10K+"
-    },
-    "vs/workbench/contrib/markers/browser/markers": {
-        "totalProblems": "Total {0} Problems"
-    },
-    "vs/workbench/contrib/markers/browser/markersFileDecorations": {
-        "label": "Problems",
-        "tooltip.1": "1 problem in this file",
-        "tooltip.N": "{0} problems in this file",
-        "markers.showOnFile": "Show Errors & Warnings on files and folder."
     },
     "vs/workbench/contrib/markers/browser/messages": {
         "viewCategory": "View",
@@ -4037,6 +4110,15 @@
         "problems.tree.aria.label.relatedinfo.message": "{0} at line {1} and character {2} in {3}",
         "errors.warnings.show.label": "Show Errors and Warnings"
     },
+    "vs/workbench/contrib/markers/browser/markers": {
+        "totalProblems": "Total {0} Problems"
+    },
+    "vs/workbench/contrib/markers/browser/markersFileDecorations": {
+        "label": "Problems",
+        "tooltip.1": "1 problem in this file",
+        "tooltip.N": "{0} problems in this file",
+        "markers.showOnFile": "Show Errors & Warnings on files and folder."
+    },
     "vs/workbench/contrib/markers/browser/markersPanelActions": {
         "showing filtered problems": "Showing {0} of {1}"
     },
@@ -4057,7 +4139,33 @@
         "outline.showIcons": "Render Outline Elements with Icons.",
         "outline.showProblem": "Show Errors & Warnings on Outline Elements.",
         "outline.problem.colors": "Use colors for Errors & Warnings.",
-        "outline.problems.badges": "Use badges for Errors & Warnings."
+        "outline.problems.badges": "Use badges for Errors & Warnings.",
+        "filteredTypes.file": "When set to `false` outline never shows `file`-symbols.",
+        "filteredTypes.module": "When set to `false` outline never shows `module`-symbols.",
+        "filteredTypes.namespace": "When set to `false` outline never shows `namespace`-symbols.",
+        "filteredTypes.package": "When set to `false` outline never shows `package`-symbols.",
+        "filteredTypes.class": "When set to `false` outline never shows `class`-symbols.",
+        "filteredTypes.method": "When set to `false` outline never shows `method`-symbols.",
+        "filteredTypes.property": "When set to `false` outline never shows `property`-symbols.",
+        "filteredTypes.field": "When set to `false` outline never shows `field`-symbols.",
+        "filteredTypes.constructor": "When set to `false` outline never shows `constructor`-symbols.",
+        "filteredTypes.enum": "When set to `false` outline never shows `enum`-symbols.",
+        "filteredTypes.interface": "When set to `false` outline never shows `interface`-symbols.",
+        "filteredTypes.function": "When set to `false` outline never shows `function`-symbols.",
+        "filteredTypes.variable": "When set to `false` outline never shows `variable`-symbols.",
+        "filteredTypes.constant": "When set to `false` outline never shows `constant`-symbols.",
+        "filteredTypes.string": "When set to `false` outline never shows `string`-symbols.",
+        "filteredTypes.number": "When set to `false` outline never shows `number`-symbols.",
+        "filteredTypes.boolean": "When set to `false` outline never shows `boolean`-symbols.",
+        "filteredTypes.array": "When set to `false` outline never shows `array`-symbols.",
+        "filteredTypes.object": "When set to `false` outline never shows `object`-symbols.",
+        "filteredTypes.key": "When set to `false` outline never shows `key`-symbols.",
+        "filteredTypes.null": "When set to `false` outline never shows `null`-symbols.",
+        "filteredTypes.enumMember": "When set to `false` outline never shows `enumMember`-symbols.",
+        "filteredTypes.struct": "When set to `false` outline never shows `struct`-symbols.",
+        "filteredTypes.event": "When set to `false` outline never shows `event`-symbols.",
+        "filteredTypes.operator": "When set to `false` outline never shows `operator`-symbols.",
+        "filteredTypes.typeParameter": "When set to `false` outline never shows `typeParameter`-symbols."
     },
     "vs/workbench/contrib/outline/browser/outlinePanel": {
         "collapse": "Collapse All",
@@ -4084,6 +4192,10 @@
         "outputPanelWithInputAriaLabel": "{0}, Output panel",
         "outputPanelAriaLabel": "Output panel"
     },
+    "vs/workbench/contrib/output/browser/outputServices": {
+        "output": "{0} - Output",
+        "channel": "Output channel for '{0}'"
+    },
     "vs/workbench/contrib/output/browser/outputActions": {
         "toggleOutput": "Toggle Output",
         "clearOutput": "Clear Output",
@@ -4099,10 +4211,6 @@
         "selectlog": "Select Log",
         "openLogFile": "Open Log File...",
         "selectlogFile": "Select Log file"
-    },
-    "vs/workbench/contrib/output/browser/outputServices": {
-        "output": "{0} - Output",
-        "channel": "Output channel for '{0}'"
     },
     "vs/workbench/contrib/performance/electron-browser/performance.contribution": {
         "show.cat": "Developer",
@@ -4146,9 +4254,9 @@
         "filterOnlineServicesLabel": "Show settings for online services"
     },
     "vs/workbench/contrib/preferences/browser/keybindingWidgets": {
+        "defineKeybinding.initial": "Press desired key combination and then press ENTER.",
         "defineKeybinding.oneExists": "1 existing command has this keybinding",
         "defineKeybinding.existing": "{0} existing commands have this keybinding",
-        "defineKeybinding.initial": "Press desired key combination and then press ENTER.",
         "defineKeybinding.chordsTo": "chord to"
     },
     "vs/workbench/contrib/preferences/browser/preferencesActions": {
@@ -4164,15 +4272,6 @@
         "configureLanguageBasedSettings": "Configure Language Specific Settings...",
         "languageDescriptionConfigured": "({0})",
         "pickLanguage": "Select Language"
-    },
-    "vs/workbench/contrib/preferences/browser/preferencesWidgets": {
-        "defaultSettings": "Place your settings in the right hand side editor to override.",
-        "noSettingsFound": "No Settings Found.",
-        "settingsSwitcherBarAriaLabel": "Settings Switcher",
-        "userSettings": "User",
-        "userSettingsRemote": "Remote",
-        "workspaceSettings": "Workspace",
-        "folderSettings": "Folder"
     },
     "vs/workbench/contrib/preferences/browser/keybindingsEditor": {
         "SearchKeybindings.FullTextSearchPlaceholder": "Type to search in keybindings",
@@ -4212,6 +4311,25 @@
         "whenAriaLabel": "When is {0}.",
         "noWhen": "No when context."
     },
+    "vs/workbench/contrib/preferences/browser/preferencesWidgets": {
+        "defaultSettings": "Place your settings in the right hand side editor to override.",
+        "noSettingsFound": "No Settings Found.",
+        "settingsSwitcherBarAriaLabel": "Settings Switcher",
+        "userSettings": "User",
+        "userSettingsRemote": "Remote",
+        "workspaceSettings": "Workspace",
+        "folderSettings": "Folder"
+    },
+    "vs/workbench/contrib/preferences/browser/settingsEditor2": {
+        "settingsContextMenuAriaShortcut": "For more actions, Press {0}.",
+        "SearchSettings.AriaLabel": "Search settings",
+        "noResults": "No Settings Found",
+        "clearSearchFilters": "Clear Filters",
+        "clearSearch": "Hapus Pencarian",
+        "settingsNoSaveNeeded": "Your changes are automatically saved as you edit.",
+        "oneResult": "1 Setting Found",
+        "moreThanOneResult": "{0} Settings Found"
+    },
     "vs/workbench/contrib/preferences/browser/preferencesEditor": {
         "SearchSettingsWidget.AriaLabel": "Search settings",
         "SearchSettingsWidget.Placeholder": "Search Settings",
@@ -4227,19 +4345,6 @@
         "defaultFolderSettings": "Default Folder Settings",
         "defaultEditorReadonly": "Edit in the right hand side editor to override defaults.",
         "preferencesAriaLabel": "Default preferences. Readonly text editor."
-    },
-    "vs/workbench/contrib/preferences/browser/settingsEditor2": {
-        "settingsContextMenuAriaShortcut": "For more actions, Press {0}.",
-        "SearchSettings.AriaLabel": "Search settings",
-        "noResults": "No Settings Found",
-        "clearSearchFilters": "Clear Filters",
-        "clearSearch": "Hapus Pencarian",
-        "settingsNoSaveNeeded": "Your changes are automatically saved as you edit.",
-        "oneResult": "1 Setting Found",
-        "moreThanOneResult": "{0} Settings Found"
-    },
-    "vs/workbench/contrib/preferences/browser/tocTree": {
-        "groupRowAriaLabel": "{0}, group"
     },
     "vs/workbench/contrib/preferences/browser/settingsLayout": {
         "commonlyUsed": "Commonly Used",
@@ -4268,6 +4373,7 @@
         "scm": "SCM",
         "extensionViewlet": "Extension Viewlet",
         "terminal": "Terminal",
+        "task": "Task",
         "problems": "Problems",
         "comments": "Comments",
         "remote": "Remote",
@@ -4276,7 +4382,10 @@
         "keyboard": "Keyboard",
         "update": "Pembaruan",
         "telemetry": "Telemetri",
-        "sync": "Sync"
+        "configuration sync": "Configuration Sync"
+    },
+    "vs/workbench/contrib/preferences/browser/tocTree": {
+        "groupRowAriaLabel": "{0}, group"
     },
     "vs/workbench/contrib/preferences/browser/settingsTreeModels": {
         "workspace": "Workspace",
@@ -4358,7 +4467,7 @@
         "viewPickerDescription": "Open View",
         "miCommandPalette": "&&Command Palette...",
         "miOpenView": "&&Open View...",
-        "miGotoSymbolInFile": "Go to &&Symbol in File...",
+        "miGotoSymbolInFile": "Pergi ke &&Simbol dalam Berkas...",
         "miGotoLine": "Go to &&Line/Column...",
         "commandPalette": "Command Palette..."
     },
@@ -4443,6 +4552,9 @@
         "restartWeb": "&&Reload"
     },
     "vs/workbench/contrib/remote/electron-browser/remote.contribution": {
+        "remote.category": "Remote",
+        "remote.showMenu": "Show Remote Menu",
+        "remote.close": "Close Remote Connection",
         "host.open": "$(sync~spin) Opening Remote...",
         "miCloseRemote": "Close Re&&mote Connection",
         "host.tooltip": "Editing on {0}",
@@ -4496,11 +4608,18 @@
         "providersVisible": "Controls how many providers are visible in the Source Control Provider section. Set to `0` to be able to manually resize the view.",
         "diffDecorations": "Controls diff decorations in the editor.",
         "diffGutterWidth": "Controls the width(px) of diff decorations in gutter (added & modified).",
+        "scm.diffDecorationsGutterVisibility.always": "Show the diff decorator in the gutter at all times.",
+        "scm.diffDecorationsGutterVisibility.hover": "Show the diff decorator in the gutter only on hover.",
+        "scm.diffDecorationsGutterVisibility": "Controls the visibilty of the Source Control diff decorator in the gutter.",
         "alwaysShowActions": "Controls whether inline actions are always visible in the Source Control view.",
         "scm.countBadge.all": "Show the sum of all Source Control Providers count badges.",
         "scm.countBadge.focused": "Show the count badge of the focused Source Control Provider.",
         "scm.countBadge.off": "Disable the Source Control count badge.",
         "scm.countBadge": "Controls the Source Control count badge.",
+        "scm.defaultViewMode.tree": "Show the repository changes as a tree.",
+        "scm.defaultViewMode.list": "Show the repository changes as a list.",
+        "scm.defaultViewMode": "Controls the default Source Control repository view mode.",
+        "autoReveal": "Controls whether the SCM view should automatically reveal and select files when opening them.",
         "miViewSCM": "S&&CM",
         "scm accept": "SCM: Accept Input"
     },
@@ -4517,7 +4636,7 @@
         "scm providers": "Source Control Providers"
     },
     "vs/workbench/contrib/scm/browser/repositoryPanel": {
-        "toggleViewMode": "ToggleViewMode"
+        "toggleViewMode": "Toggle View Mode"
     },
     "vs/workbench/contrib/scm/browser/dirtydiffDecorator": {
         "changes": "{0} of {1} changes",
@@ -4576,9 +4695,6 @@
         "search.collapseAllResults": "Controls whether the search results will be collapsed or expanded.",
         "search.useReplacePreview": "Controls whether to open Replace Preview when selecting or replacing a match.",
         "search.showLineNumbers": "Controls whether to show line numbers for search results.",
-        "search.searchRipgrepEnableDeprecated": "Deprecated. Use \"search.runInExtensionHost\" instead",
-        "search.searchRipgrepEnable": "Whether to run search in the extension host",
-        "search.runInExtensionHost": "Whether to run search in the extension host. Requires a restart to take effect.",
         "search.usePCRE2": "Whether to use the PCRE2 regex engine in text search. This enables using some advanced regex features like lookahead and backreferences. However, not all PCRE2 features are supported - only features that are also supported by JavaScript.",
         "usePCRE2Deprecated": "Deprecated. PCRE2 will be used automatically when using regex features that are only supported by PCRE2.",
         "search.actionsPositionAuto": "Position the actionbar to the right when the search view is narrow, and immediately after the content when the search view is wide.",
@@ -4610,21 +4726,22 @@
         "replaceAll.confirmation.title": "Ganti semua",
         "replaceAll.confirm.button": "&&Replace",
         "replaceAll.occurrence.file.message": "Replaced {0} occurrence across {1} file with '{2}'.",
-        "removeAll.occurrence.file.message": "Replaced {0} occurrence across {1} file'.",
+        "removeAll.occurrence.file.message": "Replaced {0} occurrence across {1} file.",
         "replaceAll.occurrence.files.message": "Replaced {0} occurrence across {1} files with '{2}'.",
         "removeAll.occurrence.files.message": "Replaced {0} occurrence across {1} files.",
         "replaceAll.occurrences.file.message": "Replaced {0} occurrences across {1} file with '{2}'.",
-        "removeAll.occurrences.file.message": "Replaced {0} occurrences across {1} file'.",
+        "removeAll.occurrences.file.message": "Replaced {0} occurrences across {1} file.",
         "replaceAll.occurrences.files.message": "Replaced {0} occurrences across {1} files with '{2}'.",
         "removeAll.occurrences.files.message": "Replaced {0} occurrences across {1} files.",
         "removeAll.occurrence.file.confirmation.message": "Replace {0} occurrence across {1} file with '{2}'?",
-        "replaceAll.occurrence.file.confirmation.message": "Replace {0} occurrence across {1} file'?",
+        "replaceAll.occurrence.file.confirmation.message": "Replace {0} occurrence across {1} file?",
         "removeAll.occurrence.files.confirmation.message": "Replace {0} occurrence across {1} files with '{2}'?",
         "replaceAll.occurrence.files.confirmation.message": "Replace {0} occurrence across {1} files?",
         "removeAll.occurrences.file.confirmation.message": "Replace {0} occurrences across {1} file with '{2}'?",
-        "replaceAll.occurrences.file.confirmation.message": "Replace {0} occurrences across {1} file'?",
-        "removeAll.occurrences.files.confirmation.message": "Replace {0} occurrences across {1} files with '{2}'?",
+        "replaceAll.occurrences.file.confirmation.message": "Replace {0} occurrences across {1} file?",
+        "removeAll.occurrences.files.confirmation.message": "Ganti {0} kemunculan dalam {1} berkas dengan '{2}'?",
         "replaceAll.occurrences.files.confirmation.message": "Replace {0} occurrences across {1} files?",
+        "ariaSearchResultsClearStatus": "The search results have been cleared",
         "searchPathNotFoundError": "Search path not found: {0}",
         "searchMaxResultsWarning": "The result set only contains a subset of all matches. Please be more specific in your search to narrow down the results.",
         "searchCanceled": "Search was canceled before any results could be found - ",
@@ -4656,7 +4773,6 @@
         "search.placeHolder": "Search",
         "label.Replace": "Replace: Type replace term and press Enter to preview or Escape to cancel",
         "search.replace.placeHolder": "Ganti",
-        "label.preserveCaseCheckbox": "Preserve Case",
         "regexp.backreferenceValidationFailure": "Backreferences are not supported"
     },
     "vs/workbench/contrib/search/browser/searchActions": {
@@ -4707,6 +4823,17 @@
         "sep.extSnippet": "Extension Snippets",
         "sep.workspaceSnippet": "Workspace Snippets"
     },
+    "vs/workbench/contrib/snippets/browser/snippetsService": {
+        "invalid.path.0": "Expected string in `contributes.{0}.path`. Provided value: {1}",
+        "invalid.language.0": "When omitting the language, the value of `contributes.{0}.path` must be a `.code-snippets`-file. Provided value: {1}",
+        "invalid.language": "Unknown language in `contributes.{0}.language`. Provided value: {1}",
+        "invalid.path.1": "Expected `contributes.{0}.path` ({1}) to be included inside extension's folder ({2}). This might make the extension non-portable.",
+        "vscode.extension.contributes.snippets": "Contributes snippets.",
+        "vscode.extension.contributes.snippets-language": "Language identifier for which this snippet is contributed to.",
+        "vscode.extension.contributes.snippets-path": "Path of the snippets file. The path is relative to the extension folder and typically starts with './snippets/'.",
+        "badVariableUse": "One or more snippets from the extension '{0}' very likely confuse snippet-variables and snippet-placeholders (see https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax for more details)",
+        "badFile": "The snippet file \"{0}\" could not be read."
+    },
     "vs/workbench/contrib/snippets/browser/configureSnippets": {
         "global.scope": "(global)",
         "global.1": "({0})",
@@ -4725,17 +4852,6 @@
         "preferences": "Preferensi",
         "miOpenSnippets": "User &&Snippets",
         "userSnippets": "User Snippets"
-    },
-    "vs/workbench/contrib/snippets/browser/snippetsService": {
-        "invalid.path.0": "Expected string in `contributes.{0}.path`. Provided value: {1}",
-        "invalid.language.0": "When omitting the language, the value of `contributes.{0}.path` must be a `.code-snippets`-file. Provided value: {1}",
-        "invalid.language": "Unknown language in `contributes.{0}.language`. Provided value: {1}",
-        "invalid.path.1": "Expected `contributes.{0}.path` ({1}) to be included inside extension's folder ({2}). This might make the extension non-portable.",
-        "vscode.extension.contributes.snippets": "Contributes snippets.",
-        "vscode.extension.contributes.snippets-language": "Language identifier for which this snippet is contributed to.",
-        "vscode.extension.contributes.snippets-path": "Path of the snippets file. The path is relative to the extension folder and typically starts with './snippets/'.",
-        "badVariableUse": "One or more snippets from the extension '{0}' very likely confuse snippet-variables and snippet-placeholders (see https://code.visualstudio.com/docs/editor/userdefinedsnippets#_snippet-syntax for more details)",
-        "badFile": "The snippet file \"{0}\" could not be read."
     },
     "vs/workbench/contrib/snippets/browser/snippetCompletionProvider": {
         "detail.snippet": "{0} ({1})",
@@ -4775,6 +4891,14 @@
         "TaskSystemDetector.buildTaskDetected": "Build task named '{0}' detected.",
         "TaskSystemDetector.testTaskDetected": "Test task named '{0}' detected."
     },
+    "vs/workbench/contrib/tasks/node/processTaskSystem": {
+        "version1_0": "The task system is configured for version 0.1.0 (see tasks.json file), which can only execute custom tasks. Upgrade to version 2.0.0 to run the task: {0}",
+        "TaskRunnerSystem.unknownError": "A unknown error has occurred while executing a task. See task output log for details.",
+        "TaskRunnerSystem.watchingBuildTaskFinished": "\nWatching build tasks has finished.",
+        "TaskRunnerSystem.childProcessError": "Failed to launch external program {0} {1}.",
+        "TaskRunnerSystem.cancelRequested": "\nThe task '{0}' was terminated per user request.",
+        "unknownProblemMatcher": "Problem matcher {0} can't be resolved. The matcher will be ignored"
+    },
     "vs/workbench/contrib/tasks/browser/task.contribution": {
         "tasksCategory": "Tasks",
         "building": "Building...",
@@ -4797,15 +4921,15 @@
         "TestAction.label": "Run Test Task",
         "ConfigureDefaultBuildTask.label": "Configure Default Build Task",
         "ConfigureDefaultTestTask.label": "Configure Default Test Task",
-        "quickOpen.task": "Run Task"
-    },
-    "vs/workbench/contrib/tasks/node/processTaskSystem": {
-        "version1_0": "The task system is configured for version 0.1.0 (see tasks.json file), which can only execute custom tasks. Upgrade to version 2.0.0 to run the task: {0}",
-        "TaskRunnerSystem.unknownError": "A unknown error has occurred while executing a task. See task output log for details.",
-        "TaskRunnerSystem.watchingBuildTaskFinished": "\nWatching build tasks has finished.",
-        "TaskRunnerSystem.childProcessError": "Failed to launch external program {0} {1}.",
-        "TaskRunnerSystem.cancelRequested": "\nThe task '{0}' was terminated per user request.",
-        "unknownProblemMatcher": "Problem matcher {0} can't be resolved. The matcher will be ignored"
+        "quickOpen.task": "Run Task",
+        "tasksConfigurationTitle": "Tasks",
+        "task.problemMatchers.neverPrompt": "Configures whether to show the problem matcher prompt when running a task. Set to `true` to never promp, or use an array of task types to turn off prompting only for specific task types.",
+        "task.problemMatchers.neverPrompt.boolean": "Sets problem matcher prompting behavior for all tasks.",
+        "task.problemMatchers.neverPrompt.array": "An array of task types to never prompt for problem matchers on.",
+        "task.autoDetect": "Controls enablement of `provideTasks` for all task provider extension. If the Tasks: Run Task command is slow, disabling auto detect for task providers may help. Individual extensions my provide settings to disabled auto detection.",
+        "task.slowProviderWarning": "Configures whether a warning is shown when a provider is slow",
+        "task.slowProviderWarning.boolean": "Sets the slow provider warning for all tasks.",
+        "task.slowProviderWarning.array": "An array of task types to never show the slow provider warning."
     },
     "vs/workbench/contrib/tasks/common/tasks": {
         "TaskDefinition.missingRequiredProperty": "Error: the task identifier '{0}' is missing the required property '{1}'. The task identifier will be ignored."
@@ -4825,6 +4949,12 @@
         "JsonSchema.linux": "Linux specific command configuration",
         "JsonSchema.shell": "Specifies whether the command is a shell command or an external program. Defaults to false if omitted."
     },
+    "vs/workbench/contrib/tasks/common/taskDefinitionRegistry": {
+        "TaskDefinition.description": "The actual task type. Please note that types starting with a '$' are reserved for internal usage.",
+        "TaskDefinition.properties": "Additional properties of the task type",
+        "TaskTypeConfiguration.noType": "The task type configuration is missing the required 'taskType' property",
+        "TaskDefinitionExtPoint": "Contributes task kinds"
+    },
     "vs/workbench/contrib/tasks/browser/runAutomaticTasks": {
         "tasks.run.allowAutomatic": "This folder has tasks ({0}) defined in 'tasks.json' that run automatically when you open this folder. Do you allow automatic tasks to run when you open this folder?",
         "allow": "Allow and run",
@@ -4841,11 +4971,22 @@
         "detected": "detected tasks",
         "customizeTask": "Configure Task"
     },
-    "vs/workbench/contrib/tasks/common/taskDefinitionRegistry": {
-        "TaskDefinition.description": "The actual task type. Please note that types starting with a '$' are reserved for internal usage.",
-        "TaskDefinition.properties": "Additional properties of the task type",
-        "TaskTypeConfiguration.noType": "The task type configuration is missing the required 'taskType' property",
-        "TaskDefinitionExtPoint": "Contributes task kinds"
+    "vs/workbench/contrib/tasks/common/taskConfiguration": {
+        "ConfigurationParser.invalidCWD": "Warning: options.cwd must be of type string. Ignoring value {0}\n",
+        "ConfigurationParser.inValidArg": "Error: command argument must either be a string or a quoted string. Provided value is:\n{0}",
+        "ConfigurationParser.noShell": "Warning: shell configuration is only supported when executing tasks in the terminal.",
+        "ConfigurationParser.noName": "Error: Problem Matcher in declare scope must have a name:\n{0}\n",
+        "ConfigurationParser.unknownMatcherKind": "Warning: the defined problem matcher is unknown. Supported types are string | ProblemMatcher | Array<string | ProblemMatcher>.\n{0}\n",
+        "ConfigurationParser.invalidVariableReference": "Error: Invalid problemMatcher reference: {0}\n",
+        "ConfigurationParser.noTaskType": "Error: tasks configuration must have a type property. The configuration will be ignored.\n{0}\n",
+        "ConfigurationParser.noTypeDefinition": "Error: there is no registered task type '{0}'. Did you miss to install an extension that provides a corresponding task provider?",
+        "ConfigurationParser.missingType": "Error: the task configuration '{0}' is missing the required property 'type'. The task configuration will be ignored.",
+        "ConfigurationParser.incorrectType": "Error: the task configuration '{0}' is using an unknown type. The task configuration will be ignored.",
+        "ConfigurationParser.notCustom": "Error: tasks is not declared as a custom task. The configuration will be ignored.\n{0}\n",
+        "ConfigurationParser.noTaskName": "Error: a task must provide a label property. The task will be ignored.\n{0}\n",
+        "taskConfiguration.noCommandOrDependsOn": "Error: the task '{0}' neither specifies a command nor a dependsOn property. The task will be ignored. Its definition is:\n{1}",
+        "taskConfiguration.noCommand": "Error: the task '{0}' doesn't define a command. The task will be ignored. Its definition is:\n{1}",
+        "TaskParse.noOsSpecificGlobalTasks": "Task version 2.0.0 doesn't support global OS specific tasks. Convert them to a task with a OS specific command. Affected tasks are:\n{0}"
     },
     "vs/workbench/contrib/tasks/common/jsonSchema_v2": {
         "JsonSchema.shell": "Specifies whether the command is a shell command or an external program. Defaults to false if omitted.",
@@ -4902,7 +5043,7 @@
         "JsonSchema.tasks.taskLabel": "The task's label",
         "JsonSchema.tasks.taskName": "The task's name",
         "JsonSchema.tasks.taskName.deprecated": "The task's name property is deprecated. Use the label property instead.",
-        "JsonSchema.tasks.background": "Whether the executed task is kept alive and is running in the background.",
+        "JsonSchema.tasks.background": "Apakah tugas yang dieksekusi tetap hidup dan berjalan di latar belakang.",
         "JsonSchema.tasks.promptOnClose": "Whether the user is prompted when VS Code closes with a running task.",
         "JsonSchema.tasks.matchers": "The problem matcher(s) to use. Can either be a string or a problem matcher definition or an array of strings and problem matchers.",
         "JsonSchema.customizations.customizes.type": "The task type to customize",
@@ -4917,23 +5058,6 @@
         "JsonSchema.mac": "Mac specific command configuration",
         "JsonSchema.linux": "Linux specific command configuration"
     },
-    "vs/workbench/contrib/tasks/common/taskConfiguration": {
-        "ConfigurationParser.invalidCWD": "Warning: options.cwd must be of type string. Ignoring value {0}\n",
-        "ConfigurationParser.inValidArg": "Error: command argument must either be a string or a quoted string. Provided value is:\n{0}",
-        "ConfigurationParser.noShell": "Warning: shell configuration is only supported when executing tasks in the terminal.",
-        "ConfigurationParser.noName": "Error: Problem Matcher in declare scope must have a name:\n{0}\n",
-        "ConfigurationParser.unknownMatcherKind": "Warning: the defined problem matcher is unknown. Supported types are string | ProblemMatcher | Array<string | ProblemMatcher>.\n{0}\n",
-        "ConfigurationParser.invalidVariableReference": "Error: Invalid problemMatcher reference: {0}\n",
-        "ConfigurationParser.noTaskType": "Error: tasks configuration must have a type property. The configuration will be ignored.\n{0}\n",
-        "ConfigurationParser.noTypeDefinition": "Error: there is no registered task type '{0}'. Did you miss to install an extension that provides a corresponding task provider?",
-        "ConfigurationParser.missingType": "Error: the task configuration '{0}' is missing the required property 'type'. The task configuration will be ignored.",
-        "ConfigurationParser.incorrectType": "Error: the task configuration '{0}' is using an unknown type. The task configuration will be ignored.",
-        "ConfigurationParser.notCustom": "Error: tasks is not declared as a custom task. The configuration will be ignored.\n{0}\n",
-        "ConfigurationParser.noTaskName": "Error: a task must provide a label property. The task will be ignored.\n{0}\n",
-        "taskConfiguration.noCommandOrDependsOn": "Error: the task '{0}' neither specifies a command nor a dependsOn property. The task will be ignored. Its definition is:\n{1}",
-        "taskConfiguration.noCommand": "Error: the task '{0}' doesn't define a command. The task will be ignored. Its definition is:\n{1}",
-        "TaskParse.noOsSpecificGlobalTasks": "Task version 2.0.0 doesn't support global OS specific tasks. Convert them to a task with a OS specific command. Affected tasks are:\n{0}"
-    },
     "vs/workbench/contrib/tasks/common/jsonSchemaCommon": {
         "JsonSchema.options": "Additional command options",
         "JsonSchema.options.cwd": "The current working directory of the executed program or script. If omitted Code's current workspace root is used.",
@@ -4945,6 +5069,7 @@
         "JsonSchema.tasks.args": "Arguments passed to the command when this task is invoked.",
         "JsonSchema.tasks.taskName": "The task's name",
         "JsonSchema.tasks.windows": "Windows specific command configuration",
+        "JsonSchema.tasks.matchers": "The problem matcher(s) to use. Can either be a string or a problem matcher definition or an array of strings and problem matchers.",
         "JsonSchema.tasks.mac": "Mac specific command configuration",
         "JsonSchema.tasks.linux": "Linux specific command configuration",
         "JsonSchema.tasks.suppressTaskName": "Controls whether the task name is added as an argument to the command. If omitted the globally defined value is used.",
@@ -4956,7 +5081,6 @@
         "JsonSchema.tasks.promptOnClose": "Whether the user is prompted when VS Code closes with a running task.",
         "JsonSchema.tasks.build": "Maps this task to Code's default build command.",
         "JsonSchema.tasks.test": "Maps this task to Code's default test command.",
-        "JsonSchema.tasks.matchers": "The problem matcher(s) to use. Can either be a string or a problem matcher definition or an array of strings and problem matchers.",
         "JsonSchema.args": "Additional arguments passed to the command.",
         "JsonSchema.showOutput": "Controls whether the output of the running task is shown or not. If omitted 'always' is used.",
         "JsonSchema.watching.deprecation": "Deprecated. Use isBackground instead.",
@@ -4967,78 +5091,6 @@
         "JsonSchema.taskSelector": "Prefix to indicate that an argument is task.",
         "JsonSchema.matchers": "The problem matcher(s) to use. Can either be a string or a problem matcher definition or an array of strings and problem matchers.",
         "JsonSchema.tasks": "The task configurations. Usually these are enrichments of task already defined in the external task runner."
-    },
-    "vs/workbench/contrib/tasks/browser/abstractTaskService": {
-        "ConfigureTaskRunnerAction.label": "Configure Task",
-        "tasks": "Tasks",
-        "TaskSystem.noHotSwap": "Changing the task execution engine with an active task running requires to reload the Window",
-        "reloadWindow": "Reload Window",
-        "TaskService.pickBuildTaskForLabel": "Select the build task",
-        "taskServiceOutputPrompt": "There are task errors. See the output for details.",
-        "showOutput": "Show output",
-        "TaskServer.folderIgnored": "The folder {0} is ignored since it uses task version 0.1.0",
-        "TaskService.noBuildTask1": "No build task defined. Mark a task with 'isBuildCommand' in the tasks.json file.",
-        "TaskService.noBuildTask2": "No build task defined. Mark a task with as a 'build' group in the tasks.json file.",
-        "TaskService.noTestTask1": "No test task defined. Mark a task with 'isTestCommand' in the tasks.json file.",
-        "TaskService.noTestTask2": "No test task defined. Mark a task with as a 'test' group in the tasks.json file.",
-        "TaskServer.noTask": "Task to execute is undefined",
-        "TaskService.associate": "associate",
-        "TaskService.attachProblemMatcher.continueWithout": "Continue without scanning the task output",
-        "TaskService.attachProblemMatcher.never": "Never scan the task output",
-        "TaskService.attachProblemMatcher.learnMoreAbout": "Learn more about scanning the task output",
-        "selectProblemMatcher": "Select for which kind of errors and warnings to scan the task output",
-        "customizeParseErrors": "The current task configuration has errors. Please fix the errors first before customizing a task.",
-        "tasksJsonComment": "\t// See https://go.microsoft.com/fwlink/?LinkId=733558 \n\t// for the documentation about the tasks.json format",
-        "moreThanOneBuildTask": "There are many build tasks defined in the tasks.json. Executing the first one.\n",
-        "TaskSystem.activeSame.background": "The task '{0}' is already active and in background mode.",
-        "TaskSystem.activeSame.noBackground": "The task '{0}' is already active.",
-        "terminateTask": "Terminate Task",
-        "restartTask": "Mulai ulang Tugas",
-        "TaskSystem.active": "There is already a task running. Terminate it first before executing another task.",
-        "TaskSystem.restartFailed": "Failed to terminate and restart task {0}",
-        "TaskService.noConfiguration": "Error: The {0} task detection didn't contribute a task for the following configuration:\n{1}\nThe task will be ignored.\n",
-        "TaskSystem.configurationErrors": "Error: the provided task configuration has validation errors and can't not be used. Please correct the errors first.",
-        "taskService.ignoreingFolder": "Ignoring task configurations for workspace folder {0}. Multi folder workspace task support requires that all folders use task version 2.0.0\n",
-        "TaskSystem.invalidTaskJson": "Error: The content of the tasks.json file has syntax errors. Please correct them before executing a task.\n",
-        "TaskSystem.runningTask": "There is a task running. Do you want to terminate it?",
-        "TaskSystem.terminateTask": "&&Terminate Task",
-        "TaskSystem.noProcess": "Tugas yang dijalankan tidak tersedia lagi. Apabila tugas tersebut menjalankan proses latar belakang, keluar dari VS Code dapat mengakibatkan proses tersebut tidak berinduk. Untuk menghindarinya, jalankan proses latar belakang terakhir dengan tanda tunggu.",
-        "TaskSystem.exitAnyways": "&&Exit Anyways",
-        "TerminateAction.label": "Terminate Task",
-        "TaskSystem.unknownError": "An error has occurred while running a task. See task log for details.",
-        "TaskService.noWorkspace": "Tasks are only available on a workspace folder.",
-        "TaskService.learnMore": "Learn More",
-        "configureTask": "Configure Task",
-        "recentlyUsed": "recently used tasks",
-        "configured": "configured tasks",
-        "detected": "detected tasks",
-        "TaskService.ignoredFolder": "The following workspace folders are ignored since they use task version 0.1.0: {0}",
-        "TaskService.notAgain": "Jangan Tampilkan Lagi",
-        "TaskService.pickRunTask": "Select the task to run",
-        "TaskService.noEntryToRun": "No task to run found. Configure Tasks...",
-        "TaskService.fetchingBuildTasks": "Fetching build tasks...",
-        "TaskService.pickBuildTask": "Select the build task to run",
-        "TaskService.noBuildTask": "No build task to run found. Configure Build Task...",
-        "TaskService.fetchingTestTasks": "Fetching test tasks...",
-        "TaskService.pickTestTask": "Select the test task to run",
-        "TaskService.noTestTaskTerminal": "No test task to run found. Configure Tasks...",
-        "TaskService.taskToTerminate": "Select a task to terminate",
-        "TaskService.noTaskRunning": "Tidak ada tugas yang sedang berjalan",
-        "TaskService.terminateAllRunningTasks": "All Running Tasks",
-        "TerminateAction.noProcess": "The launched process doesn't exist anymore. If the task spawned background tasks exiting VS Code might result in orphaned processes.",
-        "TerminateAction.failed": "Failed to terminate running task",
-        "TaskService.taskToRestart": "Select the task to restart",
-        "TaskService.noTaskToRestart": "No task to restart",
-        "TaskService.template": "Select a Task Template",
-        "TaskService.createJsonFile": "Create tasks.json file from template",
-        "TaskService.openJsonFile": "Open tasks.json file",
-        "TaskService.pickTask": "Select a task to configure",
-        "TaskService.defaultBuildTaskExists": "{0} is already marked as the default build task",
-        "TaskService.pickDefaultBuildTask": "Select the task to be used as the default build task",
-        "TaskService.defaultTestTaskExists": "{0} is already marked as the default test task.",
-        "TaskService.pickDefaultTestTask": "Select the task to be used as the default test task",
-        "TaskService.pickShowTask": "Select the task to show its output",
-        "TaskService.noTaskIsRunning": "No task is running"
     },
     "vs/workbench/contrib/tasks/common/problemMatcher": {
         "ProblemPatternParser.problemPattern.missingRegExp": "The problem pattern is missing a regular expression.",
@@ -5109,6 +5161,88 @@
         "eslint-stylish": "ESLint stylish problems",
         "go": "Go problems"
     },
+    "vs/workbench/contrib/tasks/browser/abstractTaskService": {
+        "ConfigureTaskRunnerAction.label": "Configure Task",
+        "tasks": "Tasks",
+        "TaskSystem.noHotSwap": "Changing the task execution engine with an active task running requires to reload the Window",
+        "reloadWindow": "Reload Window",
+        "TaskService.pickBuildTaskForLabel": "Select the build task (there is no default build task defined)",
+        "taskServiceOutputPrompt": "There are task errors. See the output for details.",
+        "showOutput": "Show output",
+        "TaskServer.folderIgnored": "The folder {0} is ignored since it uses task version 0.1.0",
+        "TaskService.noBuildTask1": "No build task defined. Mark a task with 'isBuildCommand' in the tasks.json file.",
+        "TaskService.noBuildTask2": "No build task defined. Mark a task with as a 'build' group in the tasks.json file.",
+        "TaskService.noTestTask1": "No test task defined. Mark a task with 'isTestCommand' in the tasks.json file.",
+        "TaskService.noTestTask2": "No test task defined. Mark a task with as a 'test' group in the tasks.json file.",
+        "TaskServer.noTask": "Task to execute is undefined",
+        "TaskService.associate": "associate",
+        "TaskService.attachProblemMatcher.continueWithout": "Continue without scanning the task output",
+        "TaskService.attachProblemMatcher.never": "Never scan the task output",
+        "TaskService.attachProblemMatcher.learnMoreAbout": "Learn more about scanning the task output",
+        "selectProblemMatcher": "Select for which kind of errors and warnings to scan the task output",
+        "customizeParseErrors": "The current task configuration has errors. Please fix the errors first before customizing a task.",
+        "tasksJsonComment": "\t// See https://go.microsoft.com/fwlink/?LinkId=733558 \n\t// for the documentation about the tasks.json format",
+        "moreThanOneBuildTask": "There are many build tasks defined in the tasks.json. Executing the first one.\n",
+        "TaskSystem.activeSame.background": "The task '{0}' is already active and in background mode.",
+        "TaskSystem.activeSame.noBackground": "The task '{0}' is already active.",
+        "terminateTask": "Terminate Task",
+        "restartTask": "Mulai ulang Tugas",
+        "TaskSystem.active": "There is already a task running. Terminate it first before executing another task.",
+        "TaskSystem.restartFailed": "Failed to terminate and restart task {0}",
+        "TaskSystem.slowProvider.settings": "Settings",
+        "TaskSystem.slowProvider.disableAll": "Disable All",
+        "TaskSystem.slowProvider.dontShow": "Don't warn again for {0} tasks",
+        "TaskSystem.slowProvider": "The {0} task provider is slow. The extension that provides {0} tasks may provide a setting to disable it, or you can disable all tasks providers",
+        "TaskService.noConfiguration": "Error: The {0} task detection didn't contribute a task for the following configuration:\n{1}\nThe task will be ignored.\n",
+        "TaskSystem.configurationErrors": "Error: the provided task configuration has validation errors and can't not be used. Please correct the errors first.",
+        "TaskSystem.invalidTaskJsonOther": "Error: The content of the tasks json in {0} has syntax errors. Please correct them before executing a task.\n",
+        "TasksSystem.locationWorkspaceConfig": "workspace file",
+        "TaskSystem.versionWorkspaceFile": "Only tasks version 2.0.0 permitted in .codeworkspace.",
+        "TasksSystem.locationUserConfig": "Pengaturan Pengguna",
+        "TaskSystem.versionSettings": "Only tasks version 2.0.0 permitted in user settings.",
+        "taskService.ignoreingFolder": "Ignoring task configurations for workspace folder {0}. Multi folder workspace task support requires that all folders use task version 2.0.0\n",
+        "TaskSystem.invalidTaskJson": "Error: The content of the tasks.json file has syntax errors. Please correct them before executing a task.\n",
+        "TaskSystem.runningTask": "There is a task running. Do you want to terminate it?",
+        "TaskSystem.terminateTask": "&&Terminate Task",
+        "TaskSystem.noProcess": "Tugas yang dijalankan tidak tersedia lagi. Apabila tugas tersebut menjalankan proses latar belakang, keluar dari VS Code dapat mengakibatkan proses tersebut tidak berinduk. Untuk menghindarinya, jalankan proses latar belakang terakhir dengan tanda tunggu.",
+        "TaskSystem.exitAnyways": "&&Exit Anyways",
+        "TerminateAction.label": "Terminate Task",
+        "TaskSystem.unknownError": "An error has occurred while running a task. See task log for details.",
+        "TaskService.noWorkspace": "Tasks are only available on a workspace folder.",
+        "TaskService.learnMore": "Learn More",
+        "taskQuickPick.userSettings": "Pengaturan Pengguna",
+        "configureTask": "Configure Task",
+        "recentlyUsed": "recently used tasks",
+        "configured": "configured tasks",
+        "detected": "detected tasks",
+        "TaskService.ignoredFolder": "Folder area kerja berikut diabaikan karena menggunakan tugas versi 0.1.0: {0}",
+        "TaskService.notAgain": "Jangan Tampilkan Lagi",
+        "TaskService.pickRunTask": "Select the task to run",
+        "TaskService.noEntryToRun": "No task to run found. Configure Tasks...",
+        "TaskService.fetchingBuildTasks": "Fetching build tasks...",
+        "TaskService.pickBuildTask": "Select the build task to run",
+        "TaskService.noBuildTask": "No build task to run found. Configure Build Task...",
+        "TaskService.fetchingTestTasks": "Fetching test tasks...",
+        "TaskService.pickTestTask": "Select the test task to run",
+        "TaskService.noTestTaskTerminal": "No test task to run found. Configure Tasks...",
+        "TaskService.taskToTerminate": "Select a task to terminate",
+        "TaskService.noTaskRunning": "Tidak ada tugas yang sedang berjalan",
+        "TaskService.terminateAllRunningTasks": "All Running Tasks",
+        "TerminateAction.noProcess": "The launched process doesn't exist anymore. If the task spawned background tasks exiting VS Code might result in orphaned processes.",
+        "TerminateAction.failed": "Failed to terminate running task",
+        "TaskService.taskToRestart": "Select the task to restart",
+        "TaskService.noTaskToRestart": "No task to restart",
+        "TaskService.template": "Select a Task Template",
+        "TaskService.createJsonFile": "Create tasks.json file from template",
+        "TaskService.openJsonFile": "Open tasks.json file",
+        "TaskService.pickTask": "Select a task to configure",
+        "TaskService.defaultBuildTaskExists": "{0} is already marked as the default build task",
+        "TaskService.pickDefaultBuildTask": "Select the task to be used as the default build task",
+        "TaskService.defaultTestTaskExists": "{0} is already marked as the default test task.",
+        "TaskService.pickDefaultTestTask": "Select the task to be used as the default test task",
+        "TaskService.pickShowTask": "Select the task to show its output",
+        "TaskService.noTaskIsRunning": "No task is running"
+    },
     "vs/workbench/contrib/tasks/common/taskTemplates": {
         "dotnetCore": "Mengeksekusi perintah membangun .NET Core",
         "msbuild": "Executes the build target",
@@ -5118,6 +5252,7 @@
     "vs/workbench/contrib/tasks/browser/terminalTaskSystem": {
         "TerminalTaskSystem.unknownError": "A unknown error has occurred while executing a task. See task output log for details.",
         "dependencyFailed": "Couldn't resolve dependent task '{0}' in workspace folder '{1}'",
+        "TerminalTaskSystem.nonWatchingMatcher": "Task {0} is a background task but uses a problem matcher without a background pattern",
         "TerminalTaskSystem.terminalName": "Task - {0}",
         "closeTerminal": "Press any key to close the terminal.",
         "reuseTerminal": "Terminal will be reused by tasks, press any key to close it.",
@@ -5189,6 +5324,7 @@
         "terminal.integrated.confirmOnExit": "Controls whether to confirm on exit if there are active terminal sessions.",
         "terminal.integrated.enableBell": "Controls whether the terminal bell is enabled.",
         "terminal.integrated.commandsToSkipShell": "A set of command IDs whose keybindings will not be sent to the shell and instead always be handled by Code. This allows the use of keybindings that would normally be consumed by the shell to act the same as when the terminal is not focused, for example ctrl+p to launch Quick Open.\nDefault Skipped Commands:\n\n{0}",
+        "terminal.integrated.allowChords": "Whether or not to allow chord keybindings in the terminal. Note that when this is true and the keystroke results in a chord it will bypass `terminal.integrated.commandsToSkipShell`, setting this to false is particularly useful when you want ctrl+k to go to your shell (not VS Code).",
         "terminal.integrated.inheritEnv": "Whether new shells should inherit their environment from VS Code. This is not supported on Windows.",
         "terminal.integrated.env.osx": "Object with environment variables that will be added to the VS Code process to be used by the terminal on macOS. Set to `null` to delete the environment variable.",
         "terminal.integrated.env.linux": "Object with environment variables that will be added to the VS Code process to be used by the terminal on Linux. Set to `null` to delete the environment variable.",
@@ -5201,6 +5337,7 @@
         "terminal.integrated.windowsEnableConpty": "Whether to use ConPTY for Windows terminal process communication (requires Windows 10 build number 18309+). Winpty will be used if this is false.",
         "terminal.integrated.experimentalRefreshOnResume": "An experimental setting that will refresh the terminal renderer when the system is resumed.",
         "terminal.integrated.experimentalUseTitleEvent": "An experimental setting that will use the terminal title event for the dropdown title. This setting will only apply to new terminals.",
+        "terminal.integrated.enableFileLinks": "Whether to enable file links in the terminal. Links can be slow when working on a network drive in particular because each file link is verified against the file system.",
         "terminal": "Terminal",
         "viewCategory": "View"
     },
@@ -5225,7 +5362,6 @@
         "workbench.action.terminal.disallowWorkspaceShell": "Disallow Workspace Shell Configuration",
         "terminalService.terminalCloseConfirmationSingular": "There is an active terminal session, do you want to kill it?",
         "terminalService.terminalCloseConfirmationPlural": "There are {0} active terminal sessions, do you want to kill them?",
-        "terminal.minWidth": "Not enough space to split terminal.",
         "terminal.integrated.chooseWindowsShell": "Select your preferred terminal shell, you can change this later in your settings"
     },
     "vs/workbench/contrib/terminal/browser/terminalActions": {
@@ -5309,12 +5445,10 @@
         "terminal.integrated.exitedWithInvalidPath": "The terminal shell path \"{0}\" does not exist",
         "terminal.integrated.exitedWithInvalidPathDirectory": "The terminal shell path \"{0}\" is a directory",
         "terminal.integrated.exitedWithInvalidCWD": "The terminal shell CWD \"{0}\" does not exist",
+        "terminal.integrated.legacyConsoleModeError": "The terminal failed to launch properly because your system has legacy console mode enabled, uncheck \"Use legacy console\" cmd.exe's properties to fix this.",
         "terminal.integrated.launchFailed": "The terminal process command '{0}{1}' failed to launch (exit code: {2})",
         "terminal.integrated.launchFailedExtHost": "The terminal process failed to launch (exit code: {0})",
         "terminal.integrated.exitedWithCode": "The terminal process terminated with exit code: {0}"
-    },
-    "vs/workbench/contrib/terminal/browser/terminalTab": {
-        "terminalFocus": "Terminal {0}"
     },
     "vs/workbench/contrib/terminal/browser/terminalConfigHelper": {
         "terminal.integrated.allowWorkspaceShell": "Do you allow this workspace to modify your terminal shell? {0}",
@@ -5322,6 +5456,9 @@
         "disallow": "Disallow",
         "useWslExtension.title": "The '{0}' extension is recommended for opening a terminal in WSL.",
         "install": "Install"
+    },
+    "vs/workbench/contrib/terminal/browser/terminalTab": {
+        "terminalFocus": "Terminal {0}"
     },
     "vs/workbench/contrib/terminal/browser/terminalLinkHandler": {
         "terminalLinkHandler.followLinkAlt.mac": "Option + click to follow link",
@@ -5351,18 +5488,14 @@
         "miSelectIconTheme": "File &&Icon Theme",
         "themes.selectIconTheme.label": "File Icon Theme"
     },
-    "vs/workbench/contrib/update/electron-browser/update": {
-        "64bitisavailable": "{0} for 64-bit Windows is now available! Click [here]({1}) to learn more."
-    },
     "vs/workbench/contrib/update/browser/update": {
         "releaseNotes": "Release Notes",
         "showReleaseNotes": "Show Release Notes",
         "read the release notes": "Welcome to {0} v{1}! Would you like to read the Release Notes?",
         "licenseChanged": "Our license terms have changed, please click [here]({0}) to go through them.",
-        "updateIsReady": "New {0} update available.",
+        "updateIsReady": "Pembaharuan {0} telah tersedia.",
         "update service": "Update Service",
         "noUpdatesAvailable": "There are currently no updates available.",
-        "ok": "OK",
         "thereIsUpdateAvailable": "There is an available update.",
         "download update": "Download Update",
         "later": "Nanti",
@@ -5376,7 +5509,7 @@
         "DownloadingUpdate": "Mengunduh Pembaruan...",
         "installUpdate...": "Install Update...",
         "installingUpdate": "Memasang Pembaruan...",
-        "restartToUpdate": "Restart to Update"
+        "restartToUpdate": "Restart to Update (1)"
     },
     "vs/workbench/contrib/update/browser/releaseNotesEditor": {
         "releaseNotesInputName": "Release Notes: {0}",
@@ -5425,22 +5558,17 @@
         "workbenchConfigurationTitle": "Meja kerja",
         "tips.enabled": "When enabled, will show the watermark tips when no editor is open."
     },
-    "vs/workbench/contrib/webview/browser/webview": {
-        "developer": "Developer"
-    },
     "vs/workbench/contrib/webview/electron-browser/webviewCommands": {
         "openToolsLabel": "Open Webview Developer Tools"
+    },
+    "vs/workbench/contrib/webview/browser/webview": {
+        "developer": "Developer"
     },
     "vs/workbench/contrib/webview/browser/webview.contribution": {
         "webview.editor.label": "webview editor"
     },
     "vs/workbench/contrib/webview/browser/webviewCommands": {
         "refreshWebviewLabel": "Reload Webviews"
-    },
-    "vs/workbench/contrib/welcome/walkThrough/browser/walkThrough.contribution": {
-        "walkThrough.editor.label": "Interactive Playground",
-        "help": "Help",
-        "miInteractivePlayground": "I&&nteractive Playground"
     },
     "vs/workbench/contrib/welcome/page/browser/welcomePage.contribution": {
         "workbenchConfigurationTitle": "Workbench",
@@ -5452,6 +5580,11 @@
         "workbench.startupEditor": "Controls which editor is shown at startup, if none are restored from the previous session.",
         "help": "Help",
         "miWelcome": "&&Welcome"
+    },
+    "vs/workbench/contrib/welcome/walkThrough/browser/walkThrough.contribution": {
+        "walkThrough.editor.label": "Interactive Playground",
+        "help": "Help",
+        "miInteractivePlayground": "I&&nteractive Playground"
     },
     "vs/workbench/contrib/welcome/overlay/browser/welcomeOverlay": {
         "welcomeOverlay.explorer": "File explorer",
@@ -5471,7 +5604,7 @@
         "editorWalkThrough.title": "Interactive Playground",
         "editorWalkThrough": "Interactive Playground"
     },
-    "vs/workbench/contrib/welcome/gettingStarted/browser/telemetryOptOut": {
+    "vs/workbench/contrib/welcome/telemetryOptOut/browser/telemetryOptOut": {
         "telemetryOptOut.optOutNotice": "Help improve VS Code by allowing Microsoft to collect usage data. Read our [privacy statement]({0}) and learn how to [opt out]({1}).",
         "telemetryOptOut.optInNotice": "Help improve VS Code by allowing Microsoft to collect usage data. Read our [privacy statement]({0}) and learn how to [opt in]({1}).",
         "telemetryOptOut.readMore": "Read More",
@@ -5487,7 +5620,6 @@
     "vs/workbench/contrib/welcome/page/browser/welcomePage": {
         "welcomePage": "Welcome",
         "welcomePage.javaScript": "JavaScript",
-        "welcomePage.typeScript": "TypeScript",
         "welcomePage.python": "Python",
         "welcomePage.php": "PHP",
         "welcomePage.azure": "Azure",
@@ -5707,20 +5839,6 @@
     "vs/workbench/services/extensions/electron-browser/remoteExtensionManagementIpc": {
         "incompatible": "Unable to install extension '{0}' as it is not compatible with VS Code '{1}'."
     },
-    "vs/workbench/services/extensions/browser/extensionUrlHandler": {
-        "confirmUrl": "Allow an extension to open this URI?",
-        "rememberConfirmUrl": "Don't ask again for this extension.",
-        "open": "&&Open",
-        "reloadAndHandle": "Extension '{0}' is not loaded. Would you like to reload the window to load the extension and open the URL?",
-        "reloadAndOpen": "&&Reload Window and Open",
-        "enableAndHandle": "Extension '{0}' is disabled. Would you like to enable the extension and reload the window to open the URL?",
-        "enableAndReload": "&&Enable and Open",
-        "installAndHandle": "Extension '{0}' is not installed. Would you like to install the extension and reload the window to open this URL?",
-        "install": "&&Install",
-        "Installing": "Installing Extension '{0}'...",
-        "reload": "Would you like to reload the window and open the URL '{0}'?",
-        "Reload": "Reload Window and Open"
-    },
     "vs/workbench/services/extensions/common/extensionsRegistry": {
         "vscode.extension.engines": "Engine compatibility.",
         "vscode.extension.engines.vscode": "For VS Code extensions, specifies the VS Code version that the extension is compatible with. Cannot be *. For example: ^0.10.5 indicates compatibility with a minimum VS Code version of 0.10.5.",
@@ -5761,6 +5879,20 @@
         "vscode.extension.scripts.prepublish": "Script executed before the package is published as a VS Code extension.",
         "vscode.extension.scripts.uninstall": "Uninstall hook for VS Code extension. Script that gets executed when the extension is completely uninstalled from VS Code which is when VS Code is restarted (shutdown and start) after the extension is uninstalled. Only Node scripts are supported.",
         "vscode.extension.icon": "The path to a 128x128 pixel icon."
+    },
+    "vs/workbench/services/extensions/browser/extensionUrlHandler": {
+        "confirmUrl": "Allow an extension to open this URI?",
+        "rememberConfirmUrl": "Don't ask again for this extension.",
+        "open": "&&Open",
+        "reloadAndHandle": "Extension '{0}' is not loaded. Would you like to reload the window to load the extension and open the URL?",
+        "reloadAndOpen": "&&Reload Window and Open",
+        "enableAndHandle": "Extension '{0}' is disabled. Would you like to enable the extension and reload the window to open the URL?",
+        "enableAndReload": "&&Enable and Open",
+        "installAndHandle": "Extension '{0}' is not installed. Would you like to install the extension and reload the window to open this URL?",
+        "install": "&&Install",
+        "Installing": "Installing Extension '{0}'...",
+        "reload": "Would you like to reload the window and open the URL '{0}'?",
+        "Reload": "Reload Window and Open"
     },
     "vs/workbench/services/extensions/electron-browser/cachedExtensionScanner": {
         "overwritingExtension": "Timpa ekstensi {0} dengan {1}.",
@@ -5931,7 +6063,7 @@
         "validations.stringArrayUniqueItems": "Array has duplicate items",
         "validations.stringArrayMinItem": "Array must have at least {0} items",
         "validations.stringArrayMaxItem": "Array must have less than {0} items",
-        "validations.stringArrayItemPattern": "Value {0} must match regex {1}.",
+        "validations.stringArrayItemPattern": "Nilai {0} harus sesuai dengan regex {1}.",
         "validations.stringArrayItemEnum": "Value {0} is not one of {1}",
         "validations.exclusiveMax": "Value must be strictly less than {0}.",
         "validations.exclusiveMin": "Value must be strictly greater than {0}.",
@@ -6085,9 +6217,6 @@
         "error.cannotparse": "Problems parsing tmTheme file: {0}",
         "error.cannotload": "Problems loading tmTheme file {0}: {1}"
     },
-    "vs/workbench/services/themes/browser/fileIconThemeData": {
-        "error.cannotparseicontheme": "Problems parsing file icons file: {0}"
-    },
     "vs/workbench/services/themes/common/fileIconThemeSchema": {
         "schema.folderExpanded": "The folder icon for expanded folders. The expanded folder icon is optional. If not set, the icon defined for folder will be shown.",
         "schema.folder": "The folder icon for collapsed folders, and if folderExpanded is not set, also for expanded folders.",
@@ -6121,9 +6250,17 @@
         "schema.highContrast": "Optional associations for file icons in high contrast color themes.",
         "schema.hidesExplorerArrows": "Configures whether the file explorer's arrows should be hidden when this theme is active."
     },
+    "vs/workbench/services/themes/browser/fileIconThemeData": {
+        "error.cannotparseicontheme": "Problems parsing file icons file: {0}"
+    },
     "vs/workbench/services/userData/common/settingsSync": {
         "Settings Conflicts": "Local ↔ Remote (Settings Conflicts)",
         "errorInvalidSettings": "Unable to sync settings. Please resolve conflicts without any errors/warnings and try again."
+    },
+    "vs/workbench/services/workspace/electron-browser/workspaceEditingService": {
+        "workspaceOpenedMessage": "Tidak dapat menyimpan ruang kerja '{0}'",
+        "ok": "OK",
+        "workspaceOpenedDetail": "The workspace is already opened in another window. Please close that window first and then try again."
     },
     "vs/workbench/services/workspace/browser/workspaceEditingService": {
         "save": "Save",
@@ -6133,9 +6270,24 @@
         "saveWorkspaceDetail": "Simpan ruang kerja anda jika Anda berencana untuk membukanya lagi",
         "saveWorkspace": "Simpan Ruang Kerja",
         "differentSchemeRoots": "Workspace folders from different providers are not allowed in the same workspace.",
+        "errorInvalidTaskConfiguration": "Tidak dapat menulis ke dalam berkas konfigurasi ruang kerja. Silakan buka berkas untuk memperbaiki kesalahan/peringatan di dalamnya dan coba lagi.",
+        "errorWorkspaceConfigurationFileDirty": "Unable to write into workspace configuration file because the file is dirty. Please save it and try again.",
+        "openWorkspaceConfigurationFile": "Open Workspace Configuration"
+    },
+    "vs/workbench/services/workspaces/electron-browser/workspaceEditingService": {
+        "save": "Save",
+        "doNotSave": "Don't Save",
+        "cancel": "Batal",
+        "saveWorkspaceMessage": "Do you want to save your workspace configuration as a file?",
+        "saveWorkspaceDetail": "Simpan ruang kerja anda jika Anda berencana untuk membukanya lagi",
         "workspaceOpenedMessage": "Tidak dapat menyimpan ruang kerja '{0}'",
         "ok": "OK",
-        "workspaceOpenedDetail": "The workspace is already opened in another window. Please close that window first and then try again.",
+        "workspaceOpenedDetail": "The workspace is already opened in another window. Please close that window first and then try again."
+    },
+    "vs/workbench/services/workspaces/browser/abstractWorkspaceEditingService": {
+        "save": "Save",
+        "saveWorkspace": "Simpan Ruang Kerja",
+        "differentSchemeRoots": "Workspace folders from different providers are not allowed in the same workspace.",
         "errorInvalidTaskConfiguration": "Tidak dapat menulis ke dalam berkas konfigurasi ruang kerja. Silakan buka berkas untuk memperbaiki kesalahan/peringatan di dalamnya dan coba lagi.",
         "errorWorkspaceConfigurationFileDirty": "Unable to write into workspace configuration file because the file is dirty. Please save it and try again.",
         "openWorkspaceConfigurationFile": "Open Workspace Configuration"
