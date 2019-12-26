@@ -18,11 +18,13 @@ And also Provider the locales of [monaco editor](https://github.com/microsoft/mo
 
     ```
     // index.js
-    import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
     import { setLocaleData } from 'monaco-editor-nls';
     import zh_CN from 'monaco-editor-nls/locale/zh-hans';
 
     setLocaleData(zh_CN);
+
+    // You must import/require after `setLocaleData`
+    const monaco = require('monaco-editor/esm/vs/editor/editor.api');
 
     monaco.editor.create(document.getElementById('container'), { language: 'javascript' });
     ```
@@ -38,12 +40,14 @@ And also Provider the locales of [monaco editor](https://github.com/microsoft/mo
 
     ```
     // index.js
-    import * as monaco from 'monaco-editor/esm/vs/editor/editor.api';
     import { setLocaleData } from 'monaco-editor-nls';
     import zh_CN from 'vscode-loc/i18n/vscode-language-pack-zh-hans/translations/main.i18n.json';
 
     // Note: there should set the `contents`.
     setLocaleData(zh_CN.contents);
+
+    // You must import/require after `setLocaleData`
+    const monaco = require('monaco-editor/esm/vs/editor/editor.api');
 
     monaco.editor.create(document.getElementById('container'), { language: 'javascript' });
     ```
