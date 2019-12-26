@@ -2,6 +2,10 @@
 
 ## [1.0.2](2019-10-25)
 
+### Bug Fixes
+
+- Fix the demo in `README.md` is not correct.
+
 ### Update
 
 - Update the locales
