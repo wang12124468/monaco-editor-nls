@@ -1,5 +1,11 @@
 # Change Log
 
+## [2.0.0](2020-01-04)
+
+## feature
+
+- Update the locale
+
 ## [1.0.4](2019-10-25)
 
 ### Bug Fixes
