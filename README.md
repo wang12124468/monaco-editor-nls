@@ -51,3 +51,7 @@ And also Provider the locales of [monaco editor](https://github.com/microsoft/mo
 
     monaco.editor.create(document.getElementById('container'), { language: 'javascript' });
     ```
+
+## Notice
+
+Current monaco-editor version: 0.32.x
