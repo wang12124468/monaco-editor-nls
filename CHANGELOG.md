@@ -1,8 +1,18 @@
 # Change Log
 
+## [3.1.0](2022-07-05)
+
+### feature
+
+- Update the locales
+   
+### Bug Fixes
+
+- Update vscode-nls.js: add getConfiguredDefaultLocale which is new used by monaco editor
+
 ## [2.0.0](2020-01-04)
 
-## feature
+### feature
 
 - Update the locale
 
