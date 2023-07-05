@@ -47,3 +47,9 @@ function config(opt) {
 }
 
 module.exports['config'] = config;
+
+function getConfiguredDefaultLocale() {
+    return undefined;
+}
+
+module.exports['getConfiguredDefaultLocale'] = getConfiguredDefaultLocale;
