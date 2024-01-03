@@ -1,4 +1,10 @@
-module.exports['localize'] = module.exports['setLocaleData'] = module.exports['loadMessageBundle'] = module.exports['config'] = null;
+module.exports['localize'] =
+  module.exports['setLocaleData'] =
+  module.exports['loadMessageBundle'] =
+  module.exports['config'] =
+  module.exports['localizeWithPath'] =
+  module.exports['setLocale'] =
+    null;
 
 function _format(message, args) {
     var result;
@@ -53,3 +59,17 @@ function getConfiguredDefaultLocale() {
 }
 
 module.exports['getConfiguredDefaultLocale'] = getConfiguredDefaultLocale;
+
+function localizeWithPath(path, data, defaultMessage, ...args) {
+  return localize(path, data, defaultMessage, ...args);
+}
+
+module.exports['localizeWithPath'] = localizeWithPath;
+
+let locale = undefined;
+let translations = {};
+function setLocale(_locale, _translations) {
+  locale = _locale;
+  translations = _translations;
+}
+module.exports['setLocale'] = setLocale;
